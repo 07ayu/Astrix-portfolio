@@ -10,7 +10,11 @@ export function useStagger(selector: string) {
     if (!ref.current) return;
 
     const ctx = gsap.context(() => {
-      const items = ref.current?.querySelectorAll(selector);
+      const container = ref.current;
+
+      if (!container) return;
+
+      const items = container.querySelectorAll(selector);
 
       gsap.fromTo(
         items,

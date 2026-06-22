@@ -11,9 +11,9 @@ export function useCounter() {
     const counters = ref.current.querySelectorAll("[data-value]");
 
     counters.forEach((counter) => {
-      const target = counter.getAttribute("data-value" || "0");
-
-      const numericValue = parseInt(target?.replace(/\D/g, ""));
+      const target = counter.getAttribute("data-value");
+      if (!target) return;
+      const numericValue = parseInt(target?.replace(/\D/g, ""), 10);
 
       const obj = { value: 0 };
 

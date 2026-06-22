@@ -25,11 +25,11 @@ type Props = {
   // icon: string;
 };
 
-export default function ServiceCard({ title, description, icon }: Props) {
+export default function ServiceCard({ title, description }: Props) {
   return (
     <div className="service-card group rounded-3xl border border-white/5 bg-[#161616] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#6D5DFC]/30 hover:bg-[#1A1A1A]">
       <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#202020] text-xl">
-        {icon}
+        {/* {icon} */}
       </div>
 
       <h3 className="mb-4 font-syne text-xl font-bold">{title}</h3>
