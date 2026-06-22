@@ -22,7 +22,7 @@
 type Props = {
   title: string;
   description: string;
-  icon: string;
+  // icon: string;
 };
 
 export default function ServiceCard({ title, description, icon }: Props) {
