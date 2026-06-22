@@ -1,9 +1,10 @@
 "use client";
 
-import { gsap } from "@/lib/gsap";
+// import { gsap } from "@/lib/gsap";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+// import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
