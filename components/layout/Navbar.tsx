@@ -99,7 +99,7 @@ export default function Navbar() {
         >
           Portfolio
         </Link>
-        <Link
+        {/* <Link
           href="/blog"
           className="
     relative
@@ -108,7 +108,7 @@ export default function Navbar() {
   "
         >
           Blog
-        </Link>
+        </Link> */}
 
         <button
           className="
