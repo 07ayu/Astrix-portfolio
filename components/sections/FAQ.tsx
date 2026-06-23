@@ -1,16 +1,25 @@
 "use client";
 
-import { useState } from "react";
-import { FAQS } from "@/lib/constants";
+import { useCallback, useState } from "react";
+import SectionHeader from "@/components/ui/SectionHeader";
+import { FAQS } from "@/data";
+import { useReveal } from "@/hooks/useReveal";
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
+  const sectionRef = useReveal({ direction: "up" });
+  const toggle = useCallback((index: number) => {
+    setOpen((prev) => (prev === index ? null : index));
+  }, []);
 
   return (
-    <section className="container-custom py-32">
-      <h2 className="mb-16 text-center font-syne text-5xl font-bold">
-        Questions?
-      </h2>
+    <section ref={sectionRef} className="container-custom py-28">
+      <div className="mb-16 text-center">
+        <SectionHeader
+          title="Questions?"
+          description="Find answers to common inquiries about our process and partnerships."
+        />
+      </div>
 
       <div className="mx-auto max-w-4xl space-y-4">
         {FAQS.map((faq, index) => (
@@ -24,7 +33,7 @@ export default function FAQ() {
             "
           >
             <button
-              onClick={() => setOpen(open === index ? null : index)}
+              onClick={() => toggle(index)}
               className="
                 flex
                 w-full

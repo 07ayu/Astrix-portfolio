@@ -3,8 +3,19 @@
 import { gsap } from "@/lib/gsap";
 import { useLayoutEffect, useRef } from "react";
 
-export function useStagger(selector: string) {
-  const ref = useRef<HTMLElement>(null);
+export function useStagger(selector: string, options?: {
+  stagger?: number;
+  duration?: number;
+  distance?: number;
+  triggerStart?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const {
+    stagger = 0.12,
+    duration = 0.8,
+    distance = 40,
+    triggerStart = "top 85%",
+  } = options ?? {};
 
   useLayoutEffect(() => {
     if (!ref.current) return;
@@ -18,19 +29,16 @@ export function useStagger(selector: string) {
 
       gsap.fromTo(
         items,
-        {
-          opacity: 0,
-          y: 40,
-        },
+        { opacity: 0, y: distance },
         {
           opacity: 1,
           y: 0,
-          stagger: 0.12,
-          duration: 0.8,
+          stagger,
+          duration,
           ease: "power3.out",
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 85%",
+            start: triggerStart,
             once: true,
           },
         },
@@ -38,7 +46,7 @@ export function useStagger(selector: string) {
     }, ref);
 
     return () => ctx.revert();
-  }, [selector]);
+  }, [selector, stagger, duration, distance, triggerStart]);
 
   return ref;
 }

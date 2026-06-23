@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | ASTRIX Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Syne:wght@700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#464555",
+                    "primary": "#c3c0ff",
+                    "outline": "#918fa1",
+                    "tertiary-container": "#a63274",
+                    "on-primary": "#1d00a5",
+                    "primary-container": "#4f46e5",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#620040",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed": "#e2dfff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-tertiary-fixed-variant": "#85145a",
+                    "inverse-primary": "#4d44e3",
+                    "tertiary": "#ffafd3",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed": "#3d0026",
+                    "secondary-fixed": "#c9e6ff",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface-tint": "#c3c0ff",
+                    "on-secondary-container": "#00344e",
+                    "surface": "#131313",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "surface-container": "#201f1f",
+                    "surface-container-high": "#2a2a2a",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "tertiary-fixed-dim": "#ffafd3",
+                    "background": "#131313",
+                    "on-secondary": "#00344d",
+                    "on-primary-container": "#dad7ff",
+                    "surface-bright": "#393939",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "secondary-container": "#00a2e6",
+                    "on-tertiary-container": "#ffcee2",
+                    "secondary-fixed-dim": "#89ceff",
+                    "error-container": "#93000a",
+                    "secondary": "#89ceff",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#c7c4d8",
+                    "tertiary-fixed": "#ffd8e7",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .etched-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(195, 192, 255, 0.2);
+        }
+        .input-focus:focus {
+            outline: none;
+            border-color: #c3c0ff;
+            background: rgba(53, 53, 52, 0.9);
+            box-shadow: 0 0 15px rgba(195, 192, 255, 0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #464555;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased custom-scrollbar">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-[30px] border-b border-white/10 shadow-[0_20px_50px_rgba(195,192,255,0.1)]">
+<div class="flex justify-between items-center h-20 px-xl max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">ASTRIX</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Blog</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md hover:scale-105 active:scale-95 transition-transform">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-xl px-md md:px-xl max-w-container-max mx-auto relative">
+<!-- Atmospheric Background Element -->
+<div class="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 -right-20 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none"></div>
+<!-- Section 1: Header -->
+<header class="mb-xl relative">
+<div class="inline-block bg-surface-container-high px-sm py-xs rounded-full mb-md border border-white/10">
+<span class="font-label-sm text-primary uppercase tracking-widest">Connect with Us</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[88px] leading-tight max-w-3xl mb-md">
+                Start a <span class="text-primary italic">Conversation</span>.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Ready to transform your digital presence? We combine elite craftsmanship with technical precision to build the future of software.
+            </p>
+</header>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Section 2: Contact Form (Large Bento Cell) -->
+<section class="lg:col-span-7 glass-card p-xl rounded-xl">
+<form class="space-y-lg" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant" for="name">Full Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant p-md rounded-lg text-on-surface input-focus transition-all duration-300" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant" for="email">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant p-md rounded-lg text-on-surface input-focus transition-all duration-300" id="email" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant">Project Type</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm">
+<button class="project-tag px-md py-sm rounded-lg font-label-sm etched-border bg-surface-container text-on-surface-variant hover:border-primary hover:text-primary transition-all" type="button">WEB DEV</button>
+<button class="project-tag px-md py-sm rounded-lg font-label-sm etched-border bg-surface-container text-on-surface-variant hover:border-primary hover:text-primary transition-all" type="button">UI/UX DESIGN</button>
+<button class="project-tag px-md py-sm rounded-lg font-label-sm etched-border bg-surface-container text-on-surface-variant hover:border-primary hover:text-primary transition-all" type="button">MOBILE APP</button>
+<button class="project-tag px-md py-sm rounded-lg font-label-sm etched-border bg-surface-container text-on-surface-variant hover:border-primary hover:text-primary transition-all" type="button">BRANDING</button>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-on-surface-variant" for="message">Your Vision</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant p-md rounded-lg text-on-surface input-focus transition-all duration-300 resize-none" id="message" placeholder="Tell us about your project, goals, and timeline..." rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary-container text-on-primary-container px-xl py-md rounded-lg font-label-md glow-hover transition-all duration-300 flex items-center justify-center gap-sm group" type="submit">
+                        Send Inquiry
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+</section>
+<!-- Sidebar Bento Cluster -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Section 3: Office Details -->
+<section class="glass-card p-md rounded-xl space-y-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Global HQ</h3>
+<div class="aspect-video w-full rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-primary/5 z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-500" data-alt="A stylized, high-contrast dark mode architectural photograph of a modern glass skyscraper in Tokyo at twilight. The image features deep charcoal tones with Electric Indigo light reflections on the glass surfaces. The atmosphere is high-tech and sophisticated, matching a premium software agency aesthetic with minimalist urban detail." data-location="Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHOXd9gcbDpRw7QAAyRPanFz_pMnYBhDj2pP23Oq1lrRjAKlSiomPQAJaXWm4E7MxIEfTiKwy-u7bpJN39WWb68-7q6UyPwoyBssaW_Ai0G2VFc4fPM3dxUIj_JVtxeSnO589zTUDGpKpeTeN6ql_UpebdJWvRiJxDx2fqOE83X9ckijBehpvfkidfjqjLGQ3RQHMlyS8vuyBrsiq6yEF2Sda5-j5ChK9pMhVdUwj6dg8HsRd62GHUCeTXPRWWP8U5pxA5O61wRk70"/>
+</div>
+<div class="space-y-sm">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="text-on-surface-variant">Shibuya Scramble Square, 2-24-12 Shibuya, Tokyo 150-0002, Japan</p>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">alternate_email</span>
+<p class="text-on-surface-variant">hello@astrix.agency</p>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">call</span>
+<p class="text-on-surface-variant">+81 (03) 5468-XXXX</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Social Presence -->
+<section class="grid grid-cols-2 gap-sm">
+<a class="glass-card p-md rounded-xl flex flex-col gap-sm hover:border-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">hub</span>
+<span class="font-label-md text-on-surface">LinkedIn</span>
+</a>
+<a class="glass-card p-md rounded-xl flex flex-col gap-sm hover:border-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">code</span>
+<span class="font-label-md text-on-surface">GitHub</span>
+</a>
+<a class="glass-card p-md rounded-xl flex flex-col gap-sm hover:border-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">brush</span>
+<span class="font-label-md text-on-surface">Dribbble</span>
+</a>
+<a class="glass-card p-md rounded-xl flex flex-col gap-sm hover:border-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">public</span>
+<span class="font-label-md text-on-surface">Twitter</span>
+</a>
+</section>
+<!-- Section 5: Quick Links -->
+<section class="glass-card p-md rounded-xl bg-primary-container/10 border-primary/20">
+<h4 class="font-label-md text-primary mb-md">Need answers fast?</h4>
+<div class="space-y-sm">
+<a class="flex justify-between items-center p-sm bg-surface-container/50 rounded-lg hover:bg-surface-container transition-all group" href="#">
+<span class="text-on-surface">Browse our Portfolio</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">trending_flat</span>
+</a>
+<a class="flex justify-between items-center p-sm bg-surface-container/50 rounded-lg hover:bg-surface-container transition-all group" href="#">
+<span class="text-on-surface">Read our FAQ</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">trending_flat</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 w-full py-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl max-w-container-max mx-auto">
+<div class="flex flex-col gap-md">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">ASTRIX</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Astrix Agency. Elite Craftsmanship.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<h5 class="font-label-md text-primary mb-xs">Navigation</h5>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Portfolio</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h5 class="font-label-md text-primary mb-xs">Insights</h5>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Blog</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">FAQ</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Process</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h5 class="font-label-md text-primary mb-xs">Legal</h5>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for project tags
+        document.querySelectorAll('.project-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                // Toggle active state
+                if (tag.classList.contains('bg-primary')) {
+                    tag.classList.remove('bg-primary', 'text-on-primary');
+                    tag.classList.add('bg-surface-container', 'text-on-surface-variant');
+                } else {
+                    tag.classList.remove('bg-surface-container', 'text-on-surface-variant');
+                    tag.classList.add('bg-primary', 'text-on-primary');
+                }
+            });
+        });
+
+        // Simple form handling
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Message Sent';
+                btn.classList.replace('bg-primary-container', 'bg-green-600');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-green-600', 'bg-primary-container');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Scroll reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, header').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

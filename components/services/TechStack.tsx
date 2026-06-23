@@ -1,5 +1,6 @@
 "use client";
 
+import { useStagger } from "@/hooks/useStagger";
 import {
   SiNextdotjs,
   SiReact,
@@ -42,6 +43,8 @@ const stack = [
 ];
 
 export default function TechStack() {
+  const gridRef = useStagger(".tech-item", { stagger: 0.08 });
+
   return (
     <section className="border-y border-white/5 bg-[#0c0c0c] py-16">
       <div className="container-custom">
@@ -51,14 +54,14 @@ export default function TechStack() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+        <div ref={gridRef} className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
           {stack.map((item) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={item.name}
-                className="group flex flex-col items-center gap-4"
+                className="tech-item group flex flex-col items-center gap-4"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[#141414] transition-all duration-300 group-hover:border-[#6D5DFC]/40 group-hover:bg-[#181818]">
                   <Icon size={28} />

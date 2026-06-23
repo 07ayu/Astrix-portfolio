@@ -1,19 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import SectionContainer from "../shared/SectionContainer";
-import { team } from "@/lib/constants";
+import SectionHeader from "@/components/ui/SectionHeader";
+import { useReveal } from "@/hooks/useReveal";
+import { useStagger } from "@/hooks/useStagger";
+import { team } from "@/data";
 
 export default function Team() {
+  const headingRef = useReveal({ direction: "up" });
+  const gridRef = useStagger(".team-card");
+
   return (
     <SectionContainer>
-      <h2 className="mb-12 text-center font-syne text-4xl font-bold">
-        The Architects
-      </h2>
+      <div ref={headingRef}>
+        <SectionHeader
+          title="The Architects"
+          description="Meet the minds behind the machine."
+        />
+      </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div ref={gridRef} className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {team.map((member) => (
           <div
             key={member.name}
-            className="group overflow-hidden rounded-2xl border border-white/10 bg-[#141414]"
+            className="team-card group overflow-hidden rounded-2xl border border-white/10 bg-[#141414]"
           >
             <div className="aspect-[4/5] overflow-hidden">
               <Image

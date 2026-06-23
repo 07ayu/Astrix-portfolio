@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 
 interface SectionContainerProps {
@@ -10,8 +12,8 @@ export default function SectionContainer({
   className,
 }: SectionContainerProps) {
   return (
-    <section className={`py-24 ${className || ""}`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">{children}</div>
+    <section className={`py-20 ${className || ""}`}>
+      <div className="container-custom">{children}</div>
     </section>
   );
 }

@@ -1,10 +1,14 @@
+"use client";
+
+import { memo } from "react";
+
 type Props = {
   number: string;
   title: string;
   description: string;
 };
 
-export default function ProcessStep({ number, title, description }: Props) {
+const ProcessStep = memo(function ProcessStep({ number, title, description }: Props) {
   return (
     <div className="process-step relative text-center">
       <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#141414]">
@@ -18,4 +22,6 @@ export default function ProcessStep({ number, title, description }: Props) {
       </p>
     </div>
   );
-}
+});
+
+export default ProcessStep;

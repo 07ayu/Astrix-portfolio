@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0f0f1a"/>
+  <rect x="100" y="100" width="600" height="400" rx="20" fill="none" stroke="#6D5DFC" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="270" font-family="monospace" font-size="36" fill="#6D5DFC" text-anchor="middle" font-weight="bold">NEURAL</text>
+  <text x="400" y="320" font-family="monospace" font-size="18" fill="#6D5DFC" text-anchor="middle" opacity="0.5">SYNC</text>
+  <circle cx="400" cy="420" r="40" fill="none" stroke="#6D5DFC" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="420" r="20" fill="#6D5DFC" opacity="0.1"/>
+  <line x1="400" y1="380" x2="400" y2="360" stroke="#6D5DFC" stroke-width="1" opacity="0.4"/>
+  <line x1="400" y1="460" x2="400" y2="480" stroke="#6D5DFC" stroke-width="1" opacity="0.4"/>
+  <line x1="360" y1="420" x2="340" y2="420" stroke="#6D5DFC" stroke-width="1" opacity="0.4"/>
+  <line x1="440" y1="420" x2="460" y2="420" stroke="#6D5DFC" stroke-width="1" opacity="0.4"/>
+  <line x1="372" y1="392" x2="358" y2="378" stroke="#6D5DFC" stroke-width="1" opacity="0.3"/>
+  <line x1="428" y1="448" x2="442" y2="462" stroke="#6D5DFC" stroke-width="1" opacity="0.3"/>
+</svg>

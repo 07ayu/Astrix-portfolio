@@ -1,6 +1,12 @@
+"use client";
+
+import { useReveal } from "@/hooks/useReveal";
+
 export default function CTA() {
+  const sectionRef = useReveal({ direction: "up", distance: 80 });
+
   return (
-    <section className="container-custom py-20">
+    <section ref={sectionRef} className="container-custom py-20">
       <div
         className="
           rounded-[40px]

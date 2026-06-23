@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | ASTRIX Elite Technical Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Syne:wght@700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#464555",
+                    "primary": "#c3c0ff",
+                    "outline": "#918fa1",
+                    "tertiary-container": "#a63274",
+                    "on-primary": "#1d00a5",
+                    "primary-container": "#4f46e5",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#620040",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed": "#e2dfff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-tertiary-fixed-variant": "#85145a",
+                    "inverse-primary": "#4d44e3",
+                    "tertiary": "#ffafd3",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed": "#3d0026",
+                    "secondary-fixed": "#c9e6ff",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface-tint": "#c3c0ff",
+                    "on-secondary-container": "#00344e",
+                    "surface": "#131313",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "surface-container": "#201f1f",
+                    "surface-container-high": "#2a2a2a",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "tertiary-fixed-dim": "#ffafd3",
+                    "background": "#131313",
+                    "on-secondary": "#00344d",
+                    "on-primary-container": "#dad7ff",
+                    "surface-bright": "#393939",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "secondary-container": "#00a2e6",
+                    "on-tertiary-container": "#ffcee2",
+                    "secondary-fixed-dim": "#89ceff",
+                    "error-container": "#93000a",
+                    "secondary": "#89ceff",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#c7c4d8",
+                    "tertiary-fixed": "#ffd8e7",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(32, 31, 31, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #c3c0ff;
+            box-shadow: 0 0 20px rgba(195, 192, 255, 0.15);
+        }
+        .etched-border {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(195, 192, 255, 0.15), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(0, 162, 230, 0.1), transparent 50%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-[30px] border-b border-white/10 shadow-[0_20px_50px_rgba(195,192,255,0.1)]">
+<div class="flex justify-between items-center h-20 px-xl max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">ASTRIX</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">About</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Blog</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md text-label-md hover:scale-105 active:scale-95 transition-transform">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center overflow-hidden hero-gradient">
+
+<div class="relative z-10 px-xl max-w-container-max mx-auto w-full text-center md:text-left">
+<div class="max-w-4xl">
+<span class="inline-block font-label-md text-label-md text-primary mb-md tracking-widest uppercase">Expertise &amp; Delivery</span>
+<h1 class="font-display-lg text-display-lg mb-lg leading-tight">Expert Solutions for Complex Problems.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        We bridge the gap between high-level business strategy and deep technical execution. Astrix builds digital infrastructure that scales with your ambition.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Core Services Section (Bento Grid) -->
+<section class="py-xl px-xl max-w-container-max mx-auto">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Our Core Capabilities</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Web Development -->
+<div class="md:col-span-8 glass-card etched-border p-lg rounded-xl flex flex-col md:flex-row gap-lg">
+<div class="flex-1">
+<div class="flex items-center gap-sm mb-md text-primary">
+<span class="material-symbols-outlined text-4xl">terminal</span>
+<h3 class="font-headline-md text-headline-md">Web Engineering</h3>
+</div>
+<p class="text-on-surface-variant mb-lg font-body-md">Architecting high-performance web applications that demand extreme scalability and security.</p>
+<ul class="grid grid-cols-2 gap-y-sm">
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> React &amp; Next.js</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Web3 Integrations</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Node.js Microservices</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Cloud Infrastructure</li>
+</ul>
+</div>
+<div class="w-full md:w-1/3 rounded-lg overflow-hidden h-64 md:h-auto relative">
+<img class="w-full h-full object-cover" data-alt="A high-tech cinematic close-up of a server rack glowing with electric indigo neon lights in a dark room. The image conveys high-speed data transfer and elite cloud infrastructure. The style is modern high-tech with sharp glass reflections and a deep charcoal background, perfectly aligned with a premium software agency aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUSNgyvmAIoVuLM3drH1vSkzkeyoq3Zz2UACfazEFnCyZsmCDZ5NmFV5lkE3EfNJ4om7tGzjjBqzg61aFOSIn2UusfxHGUQJMWtCOJ3dqcPvgqwXO3pAyesfxFDHzm1KXfyHb_GSz5gHj2ieJD2ZsBS4VewbYcxZYy7khzJypz93ZmFSdxTd7NGCXlSuALBV4j1ujHGGvWs4Arf50N18mexp45mMdxyXC5nydmE1szQyQmsgnr8TCTTn64pyLpUgr8IaQ5H3ZWCAW5"/>
+</div>
+</div>
+<!-- Mobile Development -->
+<div class="md:col-span-4 glass-card etched-border p-lg rounded-xl">
+<div class="flex items-center gap-sm mb-md text-secondary">
+<span class="material-symbols-outlined text-4xl">smartphone</span>
+<h3 class="font-headline-md text-headline-md">Mobile</h3>
+</div>
+<p class="text-on-surface-variant mb-lg font-body-md">Native-grade experiences for iOS and Android built on unified codebases.</p>
+<ul class="space-y-sm mb-lg">
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-secondary scale-75">check_circle</span> Flutter &amp; React Native</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-secondary scale-75">check_circle</span> Swift/Kotlin Bridge</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-secondary scale-75">check_circle</span> Performance Tuning</li>
+</ul>
+<div class="rounded-lg overflow-hidden h-32">
+<img class="w-full h-full object-cover" data-alt="A minimalist overhead shot of a sleek smartphone displaying a complex, glowing UI interface on a dark slate surface. Soft indigo backlighting highlights the device's glass edges. The mood is sophisticated and future-proof, emphasizing precision engineering and premium design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA13hd7O7dXuBJIdhJSGcivvLXT9dZ2IJ270K3TuT67p5JPn6iMCozxf0qTX29_zvHL5DyjpOefjgpCfmJ2MEltqSW3ukftNNsbN4Ly5-6zFUzMr3EjJD7PLOcJNXgvBbu5vaVVi4WkLYmB0rLHKmhs65AWmLFknk8rNt4n31IkI9QTg5SWa-zpsukqDG7wROrU6OOX5oxQmTo-l-j6mtXax8GIqO6_ZoqkDGm7tF8JNfxNIQhPGouzlaDJM-xHocVwMCZPYQEHeiHK"/>
+</div>
+</div>
+<!-- UI/UX Design -->
+<div class="md:col-span-5 glass-card etched-border p-lg rounded-xl order-last md:order-none">
+<div class="flex items-center gap-sm mb-md text-tertiary">
+<span class="material-symbols-outlined text-4xl">stylus</span>
+<h3 class="font-headline-md text-headline-md">UI/UX</h3>
+</div>
+<p class="text-on-surface-variant mb-lg font-body-md">Designing interfaces that are as functional as they are beautiful.</p>
+<ul class="space-y-sm mb-lg">
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-tertiary scale-75">check_circle</span> Design Systems</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-tertiary scale-75">check_circle</span> Rapid Prototyping</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-tertiary scale-75">check_circle</span> User Research</li>
+</ul>
+</div>
+<!-- AI / Data Engineering -->
+<div class="md:col-span-7 glass-card etched-border p-lg rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-sm mb-md text-primary">
+<span class="material-symbols-outlined text-4xl">neurology</span>
+<h3 class="font-headline-md text-headline-md">AI &amp; Intelligence</h3>
+</div>
+<p class="text-on-surface-variant mb-lg font-body-md">Integrating proprietary AI models and LLMs into production environments.</p>
+<ul class="grid grid-cols-2 gap-sm">
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Custom LLM Training</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Python / PyTorch</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> RAG Architectures</li>
+<li class="flex items-center gap-xs font-label-md text-label-md"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Data Pipelines</li>
+</ul>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 opacity-20">
+
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="px-xl max-w-container-max mx-auto text-center">
+<h2 class="font-label-md text-label-md text-primary mb-xl tracking-widest uppercase">The Tech Stack</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-lg items-center opacity-70">
+<div class="flex flex-col items-center gap-sm grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-5xl">deployed_code</span>
+<span class="font-label-sm text-label-sm">Next.js</span>
+</div>
+<div class="flex flex-col items-center gap-sm grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-5xl">cloud</span>
+<span class="font-label-sm text-label-sm">AWS</span>
+</div>
+<div class="flex flex-col items-center gap-sm grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-5xl">code_blocks</span>
+<span class="font-label-sm text-label-sm">Python</span>
+</div>
+<div class="flex flex-col items-center gap-sm grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-5xl">database</span>
+<span class="font-label-sm text-label-sm">PostgreSQL</span>
+</div>
+<div class="flex flex-col items-center gap-sm grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-5xl">token</span>
+<span class="font-label-sm text-label-sm">GraphQL</span>
+</div>
+<div class="flex flex-col items-center gap-sm grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-5xl">terminal</span>
+<span class="font-label-sm text-label-sm">Docker</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Approach Section -->
+<section class="py-xl px-xl max-w-container-max mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Our Approach</h2>
+<p class="text-on-surface-variant font-body-md max-w-xl mx-auto">How we turn complex architectural challenges into seamless digital reality.</p>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-xl">
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md mb-md shadow-lg shadow-primary/20">1</div>
+<h4 class="font-headline-md text-headline-md mb-sm">Discovery</h4>
+<p class="text-on-surface-variant font-body-md">We analyze the technical debt, business logic, and scaling requirements of your vision.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md mb-md shadow-lg shadow-primary/20">2</div>
+<h4 class="font-headline-md text-headline-md mb-sm">Execution</h4>
+<p class="text-on-surface-variant font-body-md">Agile sprints with 100% test coverage and continuous deployment pipelines.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md mb-md shadow-lg shadow-primary/20">3</div>
+<h4 class="font-headline-md text-headline-md mb-sm">Optimization</h4>
+<p class="text-on-surface-variant font-body-md">Post-launch monitoring and iterative tuning for performance and security.</p>
+</div>
+<!-- Connector Line (Desktop Only) -->
+<div class="hidden md:block absolute top-8 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-primary/50 via-secondary/50 to-primary/50 -z-0"></div>
+</div>
+</section>
+<!-- Service FAQ -->
+<section class="py-xl px-xl max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-xl text-center">Technical Delivery FAQ</h2>
+<div class="space-y-md">
+<div class="glass-card rounded-lg p-md border-b-4 border-b-primary/30">
+<button class="w-full flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-headline-md text-headline-md text-[20px]">What is your maintenance protocol post-launch?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="mt-md text-on-surface-variant font-body-md hidden">
+                        We provide 24/7 technical monitoring and dedicated SLAs for security patches and infrastructure scaling. Our team remains on call for critical updates and feature expansions.
+                    </div>
+</div>
+<div class="glass-card rounded-lg p-md border-b-4 border-b-secondary/30">
+<button class="w-full flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-headline-md text-headline-md text-[20px]">How do you ensure data security?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="mt-md text-on-surface-variant font-body-md hidden">
+                        Astrix follows industry-standard security practices, including end-to-end encryption, SOC2 compliance frameworks, and regular third-party penetration testing.
+                    </div>
+</div>
+<div class="glass-card rounded-lg p-md border-b-4 border-b-tertiary/30">
+<button class="w-full flex justify-between items-center text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-headline-md text-headline-md text-[20px]">Can you work with existing legacy code?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="mt-md text-on-surface-variant font-body-md hidden">
+                        Yes. We specialize in "Modernization without Interruption," where we refactor and wrap legacy systems in modern APIs to allow for iterative updates.
+                    </div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="py-xl px-xl max-w-container-max mx-auto">
+<div class="relative rounded-2xl overflow-hidden p-xl text-center bg-surface-container-high border border-white/5">
+
+<div class="relative z-10">
+<h2 class="font-display-lg text-headline-lg mb-md">Ready for a Deep Dive?</h2>
+<p class="text-on-surface-variant font-body-lg mb-lg max-w-xl mx-auto">Get an unbiased assessment of your current infrastructure and a roadmap for the future.</p>
+<button class="bg-primary text-on-primary px-lg py-md rounded-lg font-headline-md text-[18px] hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20">
+                        Request a Service Audit
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl max-w-container-max mx-auto">
+<div class="flex flex-col gap-md">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">ASTRIX</div>
+<p class="text-on-surface-variant font-body-md">Elite technical craftsmanship for the next generation of digital leaders.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary mb-md">Services</h5>
+<ul class="flex flex-col gap-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Web Development</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Mobile Solutions</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">AI Engineering</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Cloud Migration</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary mb-md">Company</h5>
+<ul class="flex flex-col gap-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">About</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Portfolio</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary mb-md">Legal</h5>
+<ul class="flex flex-col gap-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-xl text-center px-xl">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Astrix Agency. Elite Craftsmanship.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

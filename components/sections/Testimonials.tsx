@@ -1,13 +1,24 @@
-import { TESTIMONIALS } from "@/lib/constants";
+"use client";
+
+import SectionHeader from "@/components/ui/SectionHeader";
+import { TESTIMONIALS } from "@/data";
+import { useReveal } from "@/hooks/useReveal";
+import { useStagger } from "@/hooks/useStagger";
 
 export default function Testimonials() {
-  return (
-    <section className="container-custom py-32">
-      <h2 className="mb-16 text-center font-syne text-5xl font-bold">
-        Voices of Success
-      </h2>
+  const headingRef = useReveal({ direction: "up" });
+  const gridRef = useStagger(".testimonial-card");
 
-      <div className="grid gap-6 lg:grid-cols-3">
+  return (
+    <section className="container-custom py-28">
+      <div ref={headingRef}>
+        <SectionHeader
+          title="Voices of Success"
+          description="Hear from the teams and leaders we've partnered with."
+        />
+      </div>
+
+      <div ref={gridRef} className="grid gap-6 lg:grid-cols-3">
         {TESTIMONIALS.map((item) => (
           <div
             key={item.name}

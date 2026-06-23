@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0f0f1a"/>
+  <rect x="100" y="100" width="600" height="400" rx="20" fill="none" stroke="#6D5DFC" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="270" font-family="monospace" font-size="36" fill="#6D5DFC" text-anchor="middle" font-weight="bold">VANGUARD</text>
+  <text x="400" y="320" font-family="monospace" font-size="18" fill="#6D5DFC" text-anchor="middle" opacity="0.5">MOBILE</text>
+  <rect x="300" y="370" width="200" height="60" rx="30" fill="#6D5DFC" opacity="0.15" stroke="#6D5DFC" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="400" r="8" fill="#6D5DFC" opacity="0.6"/>
+  <rect x="150" y="180" width="100" height="30" rx="4" fill="#6D5DFC" opacity="0.1" stroke="#6D5DFC" stroke-width="1" opacity="0.2"/>
+  <rect x="300" y="180" width="100" height="30" rx="4" fill="#6D5DFC" opacity="0.1" stroke="#6D5DFC" stroke-width="1" opacity="0.2"/>
+</svg>

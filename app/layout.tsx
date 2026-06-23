@@ -25,9 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={` h-full antialiased`}>
+    <html lang="en" className="h-full antialiased">
       <body
-        className={`${inter.variable} ${syne.variable}min-h-full flex flex-col bg-black text-white`}
+        className={`${inter.variable} ${syne.variable} min-h-full flex flex-col bg-black text-white`}
+        suppressHydrationWarning
       >
         <Providers>{children}</Providers>
       </body>

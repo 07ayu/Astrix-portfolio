@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0f0f1a"/>
+  <rect x="100" y="100" width="600" height="400" rx="20" fill="none" stroke="#6D5DFC" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="280" font-family="monospace" font-size="36" fill="#6D5DFC" text-anchor="middle" font-weight="bold">AETHER</text>
+  <text x="400" y="330" font-family="monospace" font-size="18" fill="#6D5DFC" text-anchor="middle" opacity="0.5">CITY</text>
+  <rect x="200" y="380" width="400" height="80" rx="8" fill="none" stroke="#6D5DFC" stroke-width="1" opacity="0.2"/>
+  <rect x="220" y="400" width="60" height="40" rx="4" fill="#6D5DFC" opacity="0.15"/>
+  <rect x="300" y="390" width="60" height="50" rx="4" fill="#6D5DFC" opacity="0.2"/>
+  <rect x="380" y="410" width="60" height="30" rx="4" fill="#6D5DFC" opacity="0.1"/>
+  <rect x="460" y="395" width="60" height="45" rx="4" fill="#6D5DFC" opacity="0.15"/>
+  <rect x="540" y="405" width="40" height="35" rx="4" fill="#6D5DFC" opacity="0.2"/>
+  <line x1="250" y1="180" x2="250" y2="350" stroke="#6D5DFC" stroke-width="1" opacity="0.15"/>
+  <line x1="350" y1="150" x2="350" y2="350" stroke="#6D5DFC" stroke-width="1" opacity="0.15"/>
+  <line x1="450" y1="170" x2="450" y2="350" stroke="#6D5DFC" stroke-width="1" opacity="0.15"/>
+  <line x1="550" y1="190" x2="550" y2="350" stroke="#6D5DFC" stroke-width="1" opacity="0.15"/>
+</svg>

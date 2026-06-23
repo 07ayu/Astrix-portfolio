@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useReveal } from "@/hooks/useReveal";
 
 export default function Hero() {
+  const contentRef = useReveal({ direction: "up", delay: 0.1 });
+  const visualRef = useReveal({ direction: "right", delay: 0.2 });
+
   return (
     <section className="relative overflow-hidden border-b border-white/5">
       {/* Background */}
@@ -10,30 +14,19 @@ export default function Hero() {
 
       <div className="absolute left-1/2 top-20 -translate-x-1/2 h-[650px] w-[900px] rounded-full bg-[#6D5DFC]/15 blur-[220px]" />
 
-      <div className="container-custom relative pt-32 pb-28">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="container-custom relative pt-36 pb-28">
+        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
           {/* LEFT */}
-          <div>
+          <div ref={contentRef}>
             {/* EYEBROW */}
             <div className="mb-8">
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[11px] uppercase tracking-[0.25em] text-white/70">
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.25em] text-white/70">
                 Elite Software Studio
               </span>
             </div>
 
             {/* HEADING */}
-            <h1
-              className="
-                max-w-[760px]
-                font-syne
-                text-[64px]
-                font-extrabold
-                leading-[0.86]
-                tracking-[-0.06em]
-                md:text-[88px]
-                xl:text-[110px]
-              "
-            >
+            <h1 className="font-syne text-5xl font-extrabold leading-[0.9] tracking-[-0.04em] md:text-6xl lg:text-7xl">
               Engineering
               <br />
               Excellence
@@ -42,7 +35,7 @@ export default function Hero() {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-8 max-w-[580px] text-[17px] leading-8 text-neutral-400">
+            <p className="mt-8 max-w-lg text-lg leading-8 text-neutral-400">
               We architect high-performance software ecosystems for startups,
               enterprises, and ambitious founders seeking uncompromising
               technical execution.
@@ -85,7 +78,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT VISUAL */}
-          <div className="relative">
+          <div ref={visualRef} className="relative">
             {/* floating card */}
             <div className="absolute -left-8 top-10 z-20 rounded-3xl border border-white/10 bg-black/70 p-6 backdrop-blur-xl">
               <p className="text-xs uppercase tracking-widest text-neutral-500">
@@ -102,7 +95,7 @@ export default function Hero() {
             {/* image */}
             <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[#111]">
               <Image
-                src="/hero/server-room.jpg"
+                src="/hero/server-room.svg"
                 alt="Astrix Infrastructure"
                 width={1200}
                 height={1600}

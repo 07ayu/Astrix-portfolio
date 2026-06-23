@@ -1,10 +1,14 @@
+"use client";
+
+import { memo } from "react";
+
 type Props = {
   badge?: string;
   title: string;
   description?: string;
 };
 
-export default function SectionHeader({ badge, title, description }: Props) {
+const SectionHeader = memo(function SectionHeader({ badge, title, description }: Props) {
   return (
     <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
       <div>
@@ -20,10 +24,12 @@ export default function SectionHeader({ badge, title, description }: Props) {
       </div>
 
       {description && (
-        <p className="max-w-[320px] text-sm leading-7 text-neutral-400">
+        <p className="max-w-sm text-sm leading-7 text-neutral-400">
           {description}
         </p>
       )}
     </div>
   );
-}
+});
+
+export default SectionHeader;

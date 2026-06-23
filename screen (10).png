@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | ASTRIX</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#464555",
+                    "primary": "#c3c0ff",
+                    "outline": "#918fa1",
+                    "tertiary-container": "#a63274",
+                    "on-primary": "#1d00a5",
+                    "primary-container": "#4f46e5",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#620040",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed": "#e2dfff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-tertiary-fixed-variant": "#85145a",
+                    "inverse-primary": "#4d44e3",
+                    "tertiary": "#ffafd3",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed": "#3d0026",
+                    "secondary-fixed": "#c9e6ff",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface-tint": "#c3c0ff",
+                    "on-secondary-container": "#00344e",
+                    "surface": "#131313",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "surface-container": "#201f1f",
+                    "surface-container-high": "#2a2a2a",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "tertiary-fixed-dim": "#ffafd3",
+                    "background": "#131313",
+                    "on-secondary": "#00344d",
+                    "on-primary-container": "#dad7ff",
+                    "surface-bright": "#393939",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "secondary-container": "#00a2e6",
+                    "on-tertiary-container": "#ffcee2",
+                    "secondary-fixed-dim": "#89ceff",
+                    "error-container": "#93000a",
+                    "secondary": "#89ceff",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#c7c4d8",
+                    "tertiary-fixed": "#ffd8e7",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(28, 27, 27, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .etched-border-b {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #c3c0ff 0%, #89ceff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .primary-button {
+            background: linear-gradient(135deg, #4f46e5 0%, #00a2e6 100%);
+            box-shadow: 0 0 20px rgba(195, 192, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .primary-button:hover {
+            box-shadow: 0 0 30px rgba(195, 192, 255, 0.4);
+            transform: scale(1.02);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-[30px] border-b border-white/10 shadow-[0_20px_50px_rgba(195,192,255,0.1)]">
+<nav class="flex justify-between items-center h-20 px-md md:px-xl max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">ASTRIX</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Blog</a>
+</div>
+<button class="primary-button text-white font-label-md text-label-md px-md py-sm rounded-lg hover:scale-105 active:scale-95 transition-transform">
+                Get in Touch
+            </button>
+</nav>
+</header>
+<main>
+<!-- Section 1: Hero Header -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+
+<div class="relative z-10 text-center px-md max-w-4xl">
+<span class="font-label-md text-label-md text-primary tracking-[0.2em] mb-md block">ESTABLISHED 2018</span>
+<h1 class="font-display-lg text-headline-lg md:text-display-lg text-white mb-md">
+                    We Are Astrix. <br/>
+<span class="text-gradient">We Build Excellence.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    A boutique engineering collective dedicated to crafting elite digital experiences through precision code and high-performance design.
+                </p>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-primary text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Section 2: Mission -->
+<section class="py-xl px-md max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-white mb-md">Our Mission</h2>
+<p class="font-display-lg text-headline-md md:text-headline-lg text-primary leading-tight font-bold italic">
+                        "To empower the next generation of global businesses by architecting software that is as reliable as it is revolutionary."
+                    </p>
+</div>
+<div class="w-full md:w-1/2 relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative glass-card rounded-xl overflow-hidden aspect-video">
+<img class="w-full h-full object-cover" data-alt="A clean, futuristic laboratory or high-end office environment with sleek glass walls, integrated circuit-like wall art, and glowing blue and indigo lighting, representing high-tech innovation and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_AnhyMKiI1ZXhn_2ZZHJAKk-mKpk-Lnthg49kWLIkwtuW_GwHAXJrml7kJYJrZmKOZB3urNUO1AGy00eqUaykP6wFCg8PMrJmIUhu43Q9JvLQOqHfKCtpsCGEXVgukYnzzyW4hdA7O8SpbwdyDik3QVu78bNbXreJuecWRskYCW4lysorfpVvYfOKqqjEfegG2mLcdqIz2BBDYeWk5t3CjNO2GRxr_Sqdpqdy6WaUKGiNbXQISt3Bu1j2ICN9RJJVX_9y_DZO_aV7"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Our Story (Vertical Timeline) -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-white">The Astrix Evolution</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Tracing our journey from a small studio to an elite technical powerhouse.</p>
+</div>
+<div class="relative space-y-xl before:content-[''] before:absolute before:left-1/2 before:top-0 before:h-full before:w-[1px] before:bg-outline-variant/30 before:hidden md:before:block">
+<!-- 2018 -->
+<div class="flex flex-col md:flex-row items-center gap-lg">
+<div class="w-full md:w-1/2 text-right md:pr-xl hidden md:block">
+<h3 class="font-headline-md text-headline-md text-primary">The Genesis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded by three engineers with a vision for performance-first software engineering and minimal UI.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center relative z-10 ring-8 ring-background">
+<span class="font-label-sm text-label-sm text-white">2018</span>
+</div>
+<div class="w-full md:w-1/2 md:pl-xl">
+<div class="md:hidden mb-sm">
+<h3 class="font-headline-md text-headline-md text-primary">The Genesis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded by three engineers with a vision for performance-first software engineering and minimal UI.</p>
+</div>
+<div class="glass-card p-md rounded-xl">
+<img class="w-full h-48 object-cover rounded-lg mb-md" data-alt="A minimalist vintage-style coding workstation with a single high-resolution monitor, mechanical keyboard, and blueprint sketches, in a dark charcoal and slate gray color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeuU_LbC_3A38ZMiRJsWEhPUkkNr8O35qbugtLDVxGTSVjiYRCUAjRDWzNZDC_ajiFiJXifQCurl85EjXGiS6JKavLxJ5tIHc0TGbfwqI-QM57YvO2ldwoTeobrU4oJm313JeNRF3l56mMATXJhmp_CjlXQDoh2vppTZCuv-i7vW0rXyWpm2dvCRfKUHDCFMfzWqSAqEcFvCnk2cM8DtTlmE-lJ7_2nQpH0XpQTQsYUmw_-QksJ0soxhGJRaYryokhLgoRje-Z45Lz"/>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Inception</p>
+</div>
+</div>
+</div>
+<!-- 2021 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-lg">
+<div class="w-full md:w-1/2 text-left md:pl-xl hidden md:block">
+<h3 class="font-headline-md text-headline-md text-secondary">Scaling Horizons</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Surpassed 50 successful enterprise launches, expanding our expertise into AI and blockchain integration.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center relative z-10 ring-8 ring-background">
+<span class="font-label-sm text-label-sm text-white">2021</span>
+</div>
+<div class="w-full md:w-1/2 md:pr-xl">
+<div class="md:hidden mb-sm text-right">
+<h3 class="font-headline-md text-headline-md text-secondary">Scaling Horizons</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Surpassed 50 successful enterprise launches, expanding expertise into AI and blockchain.</p>
+</div>
+<div class="glass-card p-md rounded-xl">
+<img class="w-full h-48 object-cover rounded-lg mb-md" data-alt="Dynamic visualization of data streams and neural network patterns glowing in electric indigo and cyan on a dark background, representing rapid technical scaling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO0-4UzTasWq4vEL6pzZexeXeHG2pblTeZPcQDuUYCi9byPjwfqCmKTo9_JVlaNaON_HeXvo0psqChGoGYCF69bIWUFSnhTBYMPKqTlZIdsersvAPRTkLgLIxoyySdru7YBMRRmepbEYQMYrjCaQlDtsru3ZQ5UKglI6Z8bhm5sErFRyizT0cHZckNVJJ6vYqzrOu4IBfpHIBqy8mekkJ5D20NExMvmmzSYZZhcVKxE1eotSd2TbbAsViHkReS6Pbpp7j7wxuogsd0"/>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-widest text-right">Growth</p>
+</div>
+</div>
+</div>
+<!-- 2024 -->
+<div class="flex flex-col md:flex-row items-center gap-lg">
+<div class="w-full md:w-1/2 text-right md:pr-xl hidden md:block">
+<h3 class="font-headline-md text-headline-md text-primary">Elite Standard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Now recognized as a premier agency, setting the benchmark for elite craftsmanship in the software industry.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center relative z-10 ring-8 ring-background">
+<span class="font-label-sm text-label-sm text-on-primary">2024</span>
+</div>
+<div class="w-full md:w-1/2 md:pl-xl">
+<div class="md:hidden mb-sm">
+<h3 class="font-headline-md text-headline-md text-primary">Elite Standard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Recognized as a premier agency setting the benchmark for elite software craftsmanship.</p>
+</div>
+<div class="glass-card p-md rounded-xl">
+<img class="w-full h-48 object-cover rounded-lg mb-md" data-alt="A macro shot of a sleek, high-tech server rack illuminated by subtle ambient primary indigo lighting, showcasing order, power, and modern technical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZbR-h4jlnGIJ86eP8MukSV-vX8BSof1phuAe4G03fYAEAESO_U4xW1jIP-3PaxRtpv2SZQ4vFiSdllVYxEy0_6EyDxNPo3cIIQSmypsm_SdQYIqMONadhBlUcX5ygEmwAfHz4yQak7lvRDdAbkRVQzK425uREa6ZJ63PN284j2GAfzfvswHZ568gL9QBVxjFmxgXU_cYS5rwJKH0EHZQXq2DMWSnVLg_tB9AmZ80FOBoFvxA49S25BojSmM9YVzK3uf8cSssUtt7a"/>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Today</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Core Values (Bento Grid Style) -->
+<section class="py-xl px-md max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-white mb-xl text-center">Core Engineering Principles</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Precision -->
+<div class="glass-card p-lg rounded-xl md:col-span-2 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary text-5xl mb-md" data-icon="target">target</span>
+<h3 class="font-headline-md text-headline-md text-white mb-sm">Precision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We don't just write code; we architect systems with micron-level attention to detail, ensuring zero-latency performance and unbreakable stability.</p>
+</div>
+<!-- Innovation -->
+<div class="glass-card p-lg rounded-xl md:col-span-2 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-tertiary text-5xl mb-md" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-headline-md text-headline-md text-white mb-sm">Innovation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stagnation is the enemy. We constantly integrate cutting-edge frameworks and experimental technologies to stay three steps ahead of the curve.</p>
+</div>
+<!-- Collaboration -->
+<div class="glass-card p-lg rounded-xl md:col-span-2 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-secondary text-5xl mb-md" data-icon="hub">hub</span>
+<h3 class="font-headline-md text-headline-md text-white mb-sm">Collaboration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We operate as an extension of your team. Our radical transparency model ensures you are part of every critical decision and pivot.</p>
+</div>
+<!-- Integrity -->
+<div class="glass-card p-lg rounded-xl md:col-span-2 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-on-primary-container text-5xl mb-md" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-white mb-sm">Integrity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We build with ethics in mind. Security, privacy, and long-term maintainability are baked into every line of code we ship.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Team -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-container-max mx-auto px-md text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-white">The Architects</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Meet the minds behind the machine.</p>
+</div>
+<div class="max-w-container-max mx-auto px-md grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-sm glass-card border-none">
+<img class="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional headshot of a person with a focused, confident expression, wearing modern business-casual attire, in a studio setting with dramatic side lighting and a dark gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdPovfziG6qGcr85VqqXlppm8C-hxueGZyr4vIGh72aL9ySetoDHumA3CRTSXewQdFHczo4VkQaav9415B27wWNP4H8Lu0goM6WwN_s_If0qbYEoMDZamLSgSH5lXRscZS8tBqfy4t6FdD_L38SpTn23zY8QFAIh8toTdZ4CmkthsarDsyA36S6Z2tHtFou_7udJ0_RdQHAQ7peWOOSnbqzHViA1TlbQy3Vfp0ReeBrvxCD51D3PfTrScUUZi_mUJdgD4JDAq7iZOP"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-white">Alex Volkov</h4>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-base">CEO &amp; FOUNDER</p>
+<a class="text-outline hover:text-primary transition-colors flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+<span class="font-label-sm text-label-sm">LinkedIn</span>
+</a>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-sm glass-card border-none">
+<img class="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of a lead software engineer with a thoughtful gaze, minimalist fashion, in a high-tech studio environment with soft blue edge lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCthSfk67yZksiwkuvrO0oONPqdguoTu7dJa0l4oxHhBqAec3p4bP_B6FTJ55X8qlq9mF-kUWFJEFUAvThiBxr_LNQqgbeXvog3G-OB9wN2VedaS4JXPaHp3eNR9ReyBKKCgsjlSQ9BoVR0MN9RxroLvhSaChUz2R60qdyidGNxeZzHd5rg2yH4ccNnDqTVBtd1Y7lIDg5srSVQLamyJ9vJxWM4-3aeBAANxhRV9TPSLIyftHru-mGvqJ66SDGjfUGV3BAR3zpOTajc"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-white">Sarah Chen</h4>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-base">Head of Dev</p>
+<a class="text-outline hover:text-primary transition-colors flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+<span class="font-label-sm text-label-sm">LinkedIn</span>
+</a>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-sm glass-card border-none">
+<img class="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of a female creative director with a bold look, wearing artistic modern glasses, studio lighting with warm and cool contrast on a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtuisLVn5a75I1Xy4ks1UQyRLSoebdBjgr9_QX1r9XwwSuS9Twpa8XhcEgU-Jn7nSw7qi0ezEtGJl_4TUMR-pCLlPJ3x5JSvOA7SljJM2T8sKJ4y5BBiJeEJk5YfFjhIsYnvinbl_oqPkY32NAv9TMFsFlPVOeIObFbbwSJdNmF5hLDwdyprZdUhPwMP-yDmemRenaV6djdFI5L9o1Ko9DUEKowUfyEByy0cn8hMsGyLtCDbLwv0kemSWhSn7Vz5Mb_UEO5GqhcFDo"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-white">Elena Rodriguez</h4>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-base">Lead Designer</p>
+<a class="text-outline hover:text-primary transition-colors flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+<span class="font-label-sm text-label-sm">LinkedIn</span>
+</a>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-xl mb-sm glass-card border-none">
+<img class="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional portrait of a male product strategist with a charismatic smile, clean-cut style, neutral gray background with subtle tech-themed backlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBis-jh23yb1LSGFnoO2lwErx8AjgZR8c7CeMgOY2-UrJUa-OL2XCLkP7yO3qGx-0gbI6DhI2LS3UIgGcnleSu5k7d7zcMgdrKdSvcf98OIeF8-S08nYXq19hfJV-4iBj4bcApQ6E_UYYFnIS0xEUQ7ObILgNwg0hhk1IzjOJif6Oa3qTNTroztcbv5SCl4Y2et_u3WQ8J07cJxlnQpnEZKV5DW3f6lp-7nQDxQnpNllGLxBO6mNUnfn1Qgvln8XW9-w8dMajZw4Fao"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-white">Marcus Thorne</h4>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-base">Product Strategy</p>
+<a class="text-outline hover:text-primary transition-colors flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+<span class="font-label-sm text-label-sm">LinkedIn</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 6: Culture Gallery -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-md mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-white">Inside Our World</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A culture built on curiosity, deep work, and high-octane caffeine.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-base px-base">
+<div class="relative overflow-hidden aspect-square rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Candid shot of a diverse team of developers collaborating around a large touchscreen table in a dimly lit, futuristic office space with indigo accent lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANVTOT2onH_MtEmIyVWbNP_ZgsFLixq961NEzXebLWZUgt1rjUbv2vRffjja5-Drt8wkl8eZlp2gTFhzLuDzH7YFWnEKnaZNtnnwP5mX1A0bw0ShIfAXLeBAKaaMe2raUdaklYsmDgUidBtYnHbjmciOxaQlYdNBQ_PpF0YL-c_3BNYR_8AKOWemmFzZRVP3Ju2W_xsEW0cRwkiST-HMKiEHTg1Ca1KtFg_sK2G8bTXsX1DN50pQeOFJWJu9mf4On3P4aVQZ2c5YdH"/>
+</div>
+<div class="relative overflow-hidden aspect-square rounded-lg group md:col-span-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide-angle interior shot of a high-end, minimalist creative agency lounge area with comfortable modern furniture, glass walls, and a view of a rainy cityscape through floor-to-ceiling windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO74M1A4PRxpUA5GUJF3vdtuqrOr-8fCfJ59sup0e5um4-JfTQAvlaQw03D0XE6FzfFDlsRUE69EBrMMXO6UINdB0GMXi9jNwqYGGHanZOXeXK3za7QET8yBFz3lDF_MHPwRCQcLIqOqB3OMtxG5zeNMU6z2K8Oqug04K0nH0n7m0eVY9wAnvGhGcNuZIXURdFjO-eJTdsFWSKmYKoBB91VfRhNhS4tIydIdqZdeHorl4qV7-D4EZCuZkTxN7PSJHADfiRPGpF4Eyl"/>
+</div>
+<div class="relative overflow-hidden aspect-square rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a high-performance mechanical keyboard with custom RGB lighting in shades of purple and blue, surrounded by technical sketches and a steaming cup of coffee." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_YgdpjZFtyCO_AsbPlGIDQh3p7W9-RKtS6id5SaoxAQUROnWDjlxXvpx1_hDkZoJPwPQkgwtAvh838V6twv1zRD8E8sXidZ65-sk1_JGwUcj0_ZBzSixaCuRA0RkhsOx3Y8Q6L_lb1dILn7hB50MeoNgnCVaQemAQvTGbJfRR1VcnIIcRBN48jmxI8_WmxnA5xYQtFoMNF9fmxKWgHOtLCDYOJoOUt-nbxQg8dKsIyXEcEoh1qXsLelG_vUOM2sMe5fMLaKgaTS4f"/>
+</div>
+<div class="relative overflow-hidden aspect-square rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A group of colleagues laughing and socializing on a sleek outdoor rooftop terrace of a modern office building, featuring architectural steel and glass elements during twilight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4RaBCt5w3pS4wSKjBl7xR-eOF0FN143U4CIVftjC61DuhKati7AuUMaHlglg2aqpY7ikE4jWLZLZdbTLgUwBDxzMeswjtMVCJKmauaIZrELWgK-1c4MKjypvHX_GWCfSucGySOc3Bb26hXdqY5KdvgAhJTIPV-nXak9jPCTtRVKFu5KV9HeKVI3DlE2DnJYkeYV8qMatHYnXwsyjdvVK5EHSHPYP7tC9wHqlJwpYXxdcaHML7y26LIWiZ-_csTgb08WmmqqWqpIbo"/>
+</div>
+<div class="relative overflow-hidden aspect-square rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An artistic view of a developer's multi-monitor home office setup with clean aesthetics, glowing ambient lights, and large noise-canceling headphones, representing remote work elite culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuxn1FibFkhsTEKHnlnXUpRHrOuRmKvFgcsH5zoeYtmCfURFTyk9U6PR8QJjNr40CS_QuVsT9Mh8jiG5SN4D6pi2yECb-tuTDRShiqREZTmudahCejBtbHD2L8GtTSOVRxTt1Za3GjvPOytJxFCTd4Jh_L2UUmCKvuJkRFvcqnT_ihHp-z_iCsToUngbAWkX7e18rajeyS4S1PhNBwnp6C1wgiMQlwXo9BsVapWVJ8YwcEqSz9cmo8sGVtaUUSlyvMrTlZKTIbKvY0"/>
+</div>
+<div class="relative overflow-hidden aspect-square rounded-lg group md:col-span-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract cinematic shot of team hands high-fiving or coming together over a glowing digital prototype in a dark workspace, symbolizing collaboration and victory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOWMYZo3o629HdWvEn6ADAHFVXhhva0Y8SmYrhhXnm4CHMANSp1tUihav_-kftzEbwWia6L_4qHNBJ7FQqc7cjbbg8DtlWq5kIy5VOnOcu30KuQvF-CSs2A8EKwnKnyXs509zWR7ioWz1iyZMDfcT_SSgZsmZnRGJQUGckLiMThgJI7enzANZGp-S_yvaa4UrpsmgQCzF4oG0L7_pImthl3ZiV0P78EPpKzqBIvUoSw2GaIsSzxl34eu9KgLArAFRCdyqbXwfIFHdO"/>
+</div>
+</div>
+</section>
+<!-- Section 7: CTA -->
+<section class="py-xl relative overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto px-md glass-card py-xl rounded-3xl border-primary/20 text-center">
+<h2 class="font-headline-lg text-headline-lg text-white mb-md">Ready to Build the Future?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto">Whether you're an elite engineer looking for your next challenge or a visionary business ready to scale, we want to hear from you.</p>
+<div class="flex flex-col md:flex-row gap-md justify-center items-center">
+<button class="primary-button text-white font-label-md text-label-md px-xl py-md rounded-full w-full md:w-auto">
+                        Work With Us
+                    </button>
+<button class="bg-transparent border border-primary/40 text-primary hover:bg-primary/5 font-label-md text-label-md px-xl py-md rounded-full w-full md:w-auto transition-all">
+                        Join Our Team
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-sm">ASTRIX</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Elite software development and high-performance digital design.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-md uppercase tracking-widest">Navigation</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">About</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Portfolio</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-md uppercase tracking-widest">Legal</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-md uppercase tracking-widest">Social</h4>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-xl mt-xl pt-lg border-t border-white/5 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Astrix Agency. Elite Craftsmanship.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Simple reveal animation for sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

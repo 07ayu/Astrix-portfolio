@@ -1,36 +1,24 @@
 "use client";
 
-// import { gsap } from "@/lib/gsap";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-// import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
 
   const [scrolled, setScrolled] = useState(false);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 100);
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
 
-  //   window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // useLayoutEffect(() => {
-  //   if (!navRef.current) return;
-
-  //   gsap.from(navRef.current, {
-  //     y: -100,
-  //     opacity: 0.5,
-  //     duration: 1,
-  //     ease: "power4.out",
-  //   });
-  // }, []);
   const router = useRouter();
 
   return (
@@ -70,7 +58,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href="/about "
+          href="/about"
           className="
     relative
     transition-colors
@@ -99,17 +87,6 @@ export default function Navbar() {
         >
           Portfolio
         </Link>
-        {/* <Link
-          href="/blog"
-          className="
-    relative
-    transition-colors
-    hover:text-[#6D5DFC]
-  "
-        >
-          Blog
-        </Link> */}
-
         <button
           className="
     rounded-full
@@ -120,7 +97,7 @@ export default function Navbar() {
     font-medium
     transition-all
     duration-300
-    hover:scale-y-101
+    hover:scale-105
     hover:shadow-[0_0_30px_rgba(109,93,252,0.5)]
   "
           onClick={() => router.push("/contact")}
