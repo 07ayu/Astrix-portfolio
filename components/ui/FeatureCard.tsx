@@ -1,9 +1,13 @@
+"use client";
+
+import { memo } from "react";
+
 type Props = {
   title: string;
   description: string;
 };
 
-export default function FeatureCard({ title, description }: Props) {
+const FeatureCard = memo(function FeatureCard({ title, description }: Props) {
   return (
     <div
       className="
@@ -20,4 +24,6 @@ export default function FeatureCard({ title, description }: Props) {
       <p className="leading-7 text-neutral-400">{description}</p>
     </div>
   );
-}
+});
+
+export default FeatureCard;

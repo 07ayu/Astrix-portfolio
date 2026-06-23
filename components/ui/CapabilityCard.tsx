@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 
 interface Props {
@@ -5,6 +7,7 @@ interface Props {
   description: string;
   icon: ReactNode;
   points: string[];
+  className?: string;
 }
 
 export default function CapabilityCard({
@@ -12,9 +15,10 @@ export default function CapabilityCard({
   description,
   icon,
   points,
+  className = "",
 }: Props) {
   return (
-    <div className="group rounded-[28px] border border-white/10 bg-[#141414] p-8 transition-all duration-300 hover:border-[#6D5DFC]/40">
+    <div className={`${className} group rounded-[28px] border border-white/10 bg-[#141414] p-8 transition-all duration-300 hover:border-[#6D5DFC]/40`}>
       <div className="mb-6">{icon}</div>
 
       <h3 className="mb-4 font-syne text-2xl font-bold">{title}</h3>

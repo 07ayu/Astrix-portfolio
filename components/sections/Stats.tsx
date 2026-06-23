@@ -1,7 +1,7 @@
 "use client";
 
 import { useCounter } from "@/hooks/useCounter";
-import { STATS } from "@/lib/constants";
+import { STATS } from "@/data";
 
 export default function Stats() {
   const counterRef = useCounter();
@@ -13,9 +13,9 @@ export default function Stats() {
           {STATS.map((item) => (
             <div
               key={item.label}
-              className="group text-center transition-all duration-300 hover"
+              className="group text-center transition-all duration-300"
             >
-              <div key={item.label} className="text-center">
+              <div className="text-center">
                 <h3
                   className="
     counter

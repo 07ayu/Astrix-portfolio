@@ -1,12 +1,19 @@
 "use client";
 
+import { useReveal } from "@/hooks/useReveal";
+import { useStagger } from "@/hooks/useStagger";
+
+const projectTypes = ["Web App", "Mobile App", "AI Solution", "UI/UX"];
+
 export default function ContactSection() {
+  const formRef = useReveal({ direction: "left" });
+  const sidebarRef = useStagger(".contact-card");
   return (
     <section className="py-24">
       <div className="container-custom">
-        <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
           {/* FORM */}
-          <div className="rounded-[32px] border border-white/10 bg-[#141414] p-8">
+          <div ref={formRef} className="rounded-[32px] border border-white/10 bg-[#141414] p-8">
             <form className="space-y-6">
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
@@ -40,7 +47,7 @@ export default function ContactSection() {
                 </label>
 
                 <div className="flex flex-wrap gap-3">
-                  {["Web App", "Mobile App", "AI Solution", "UI/UX"].map(
+                  {projectTypes.map(
                     (item) => (
                       <button
                         type="button"
@@ -81,8 +88,8 @@ export default function ContactSection() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="space-y-6">
-            <div className="rounded-[32px] border border-white/10 bg-[#141414] p-8">
+          <div ref={sidebarRef} className="space-y-6">
+            <div className="contact-card rounded-[32px] border border-white/10 bg-[#141414] p-8">
               <h3 className="mb-6 font-syne text-3xl font-bold">Contact</h3>
 
               <div className="space-y-4 text-neutral-400">
@@ -92,7 +99,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="contact-card grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-white/10 bg-[#141414] p-6">
                 LinkedIn
               </div>
@@ -110,7 +117,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="rounded-[32px] border border-white/10 bg-[#141414] p-8">
+            <div className="contact-card rounded-[32px] border border-white/10 bg-[#141414] p-8">
               <h4 className="mb-6 font-syne text-xl">Need answers fast?</h4>
 
               <div className="space-y-4">

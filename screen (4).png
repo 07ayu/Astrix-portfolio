@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Astrix | Elite Digital Craftsmanship</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Syne:wght@700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#464555",
+                    "primary": "#c3c0ff",
+                    "outline": "#918fa1",
+                    "tertiary-container": "#a63274",
+                    "on-primary": "#1d00a5",
+                    "primary-container": "#4f46e5",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#620040",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed": "#e2dfff",
+                    "on-primary-fixed": "#0f0069",
+                    "on-tertiary-fixed-variant": "#85145a",
+                    "inverse-primary": "#4d44e3",
+                    "tertiary": "#ffafd3",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed": "#3d0026",
+                    "secondary-fixed": "#c9e6ff",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface-tint": "#c3c0ff",
+                    "on-secondary-container": "#00344e",
+                    "surface": "#131313",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "surface-container": "#201f1f",
+                    "surface-container-high": "#2a2a2a",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "tertiary-fixed-dim": "#ffafd3",
+                    "background": "#131313",
+                    "on-secondary": "#00344d",
+                    "on-primary-container": "#dad7ff",
+                    "surface-bright": "#393939",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "secondary-container": "#00a2e6",
+                    "on-tertiary-container": "#ffcee2",
+                    "secondary-fixed-dim": "#89ceff",
+                    "error-container": "#93000a",
+                    "secondary": "#89ceff",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#c7c4d8",
+                    "tertiary-fixed": "#ffd8e7",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .etched-border {
+            border: 1px solid transparent;
+            border-top-color: rgba(255, 255, 255, 0.1);
+            border-left-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: rgba(0, 0, 0, 0.3);
+            border-right-color: rgba(0, 0, 0, 0.3);
+        }
+        .primary-glow {
+            box-shadow: 0 0 40px rgba(195, 192, 255, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #c3c0ff 0%, #89ceff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c3c0ff;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-[30px] border-b border-white/10 shadow-[0_20px_50px_rgba(195,192,255,0.1)]">
+<div class="flex justify-between items-center h-20 px-xl max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">ASTRIX</div>
+<div class="hidden md:flex gap-lg">
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#">Blog</a>
+</div>
+<button class="bg-primary-container text-on-primary px-md py-sm rounded-lg font-label-md hover:scale-105 active:scale-95 transition-transform duration-200">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto px-xl w-full grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-lg">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container-high rounded-full border border-white/5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-primary">Available for new projects</span>
+</div>
+<h1 class="font-display-lg text-display-lg max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile leading-tight">
+                    Building the <span class="text-gradient">Future</span> of Digital Experiences
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    We combine elite engineering with visionary design to build scalable software solutions that define the next generation of tech.
+                </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary-container text-on-primary px-xl py-md rounded-xl font-label-md hover:scale-105 transition-transform primary-glow">
+                        Start Your Project
+                    </button>
+<button class="border border-outline-variant text-on-surface px-xl py-md rounded-xl font-label-md hover:bg-white/5 transition-all">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="glass-card etched-border p-lg rounded-3xl relative overflow-hidden group">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 blur-3xl group-hover:bg-primary/30 transition-colors"></div>
+<div class="relative z-10 space-y-md">
+<div class="flex justify-between items-center">
+<div class="flex gap-xs">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">v2.4.0_STABLE</span>
+</div>
+<div class="space-y-sm font-label-md text-label-md text-primary/80">
+<p class="animate-pulse">_initializing system...</p>
+<p class="delay-700">_loading elite_engineering_framework...</p>
+<p class="delay-1000">_deploying premium_ui_components...</p>
+<p class="text-primary font-bold">_ASTRIX_READY: TRUE</p>
+</div>
+<div class="pt-md border-t border-white/5">
+<img class="w-full h-48 object-cover rounded-xl border border-white/10" data-alt="A futuristic, high-tech dashboard interface showing complex data visualizations, glowing line charts, and holographic 3D elements. The UI is dark slate with electric indigo accents, embodying a premium and sophisticated software development aesthetic. Professional studio lighting with a slight atmospheric haze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2bqJ7xkbrZba08Eecth8qdmoNThmlL2AMiyf_c2cw30M010SCwjgYlejyPtcZJEjxSBG-DXDfpbCOptl0OSs7rQMng_B4I6_Nl6h8Cib6SS3r6v03EtCtcPouRkE0r09aUmGIDiDlireFIAb2NNs_qKwDQRVORaAEo8yw-NtYR3iCVkoit5cLvHR7gYdIUaP-Z7-jk_M5gKoemU4_JUnY0BMl_kW61RqWyHf4y--ekwIDxOcQbaatFxHIQy5fe1J5F9F91pB8BTC9"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats & Partners -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg text-center">
+<div class="space-y-xs">
+<h2 class="font-display-lg text-[56px] text-primary">200+</h2>
+<p class="font-label-md text-label-md uppercase text-on-surface-variant">Projects Delivered</p>
+</div>
+<div class="space-y-xs">
+<h2 class="font-display-lg text-[56px] text-secondary">45+</h2>
+<p class="font-label-md text-label-md uppercase text-on-surface-variant">Elite Engineers</p>
+</div>
+<div class="space-y-xs">
+<h2 class="font-display-lg text-[56px] text-tertiary">12</h2>
+<p class="font-label-md text-label-md uppercase text-on-surface-variant">Global Awards</p>
+</div>
+<div class="space-y-xs">
+<h2 class="font-display-lg text-[56px] text-primary-fixed">98%</h2>
+<p class="font-label-md text-label-md uppercase text-on-surface-variant">Client Retention</p>
+</div>
+</div>
+<div class="mt-xl flex flex-wrap justify-center gap-xl opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Simple representative logo labels since icons are text-based -->
+<span class="font-headline-md text-outline">TECHFLOW</span>
+<span class="font-headline-md text-outline">QUANTUM</span>
+<span class="font-headline-md text-outline">NEXUS</span>
+<span class="font-headline-md text-outline">SOLARIS</span>
+<span class="font-headline-md text-outline">VELOCITY</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl relative">
+<div class="max-w-container-max mx-auto px-xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div class="max-w-xl">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-sm">Capabilities</h3>
+<h2 class="font-headline-lg text-headline-lg">Future-Ready Solutions for Modern Enterprises</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    We build specialized digital products using the world's most advanced technology stacks.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<div class="glass-card etched-border p-lg rounded-3xl hover:bg-primary/5 transition-colors group">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[32px]">code</span>
+</div>
+<h4 class="font-headline-md text-[24px] mb-sm">Web Development</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">High-performance, scalable web architectures built with React, Next.js, and Node.js.</p>
+</div>
+<!-- Service 2 -->
+<div class="glass-card etched-border p-lg rounded-3xl hover:bg-primary/5 transition-colors group">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[32px]">design_services</span>
+</div>
+<h4 class="font-headline-md text-[24px] mb-sm">UI/UX Design</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">User-centric interfaces that blend aesthetic beauty with functional precision.</p>
+</div>
+<!-- Service 3 -->
+<div class="glass-card etched-border p-lg rounded-3xl hover:bg-primary/5 transition-colors group">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[32px]">smartphone</span>
+</div>
+<h4 class="font-headline-md text-[24px] mb-sm">Mobile Apps</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Native and cross-platform mobile experiences for iOS and Android devices.</p>
+</div>
+<!-- Service 4 -->
+<div class="glass-card etched-border p-lg rounded-3xl hover:bg-primary/5 transition-colors group">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+</div>
+<h4 class="font-headline-md text-[24px] mb-sm">AI Integration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Leveraging LLMs and machine learning to automate complex business workflows.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Studies Section (Bento Grid Style) -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-container-max mx-auto px-xl">
+<h2 class="font-headline-lg text-headline-lg mb-xl text-center">Featured Work</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[800px]">
+<div class="md:col-span-8 group relative rounded-3xl overflow-hidden glass-card etched-border">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, wide-angle shot of a minimalist workspace with a sleek ultra-wide monitor displaying a complex financial trading platform with glowing charts and dark mode interface. The room is softly lit by cool blue ambient lights, with reflections on a glass desk. 8k resolution, photorealistic, tech-noir style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkQi3c8WTNNT_M9VPdSvQMGFBUJ3xjuT6RLwomCwAlKM_XfG5JB-tUnQX62q6-CHDiTgcfbAh-y2pLKuWFyxtovW_a-MUbGXjbEPIf8oSzKXoRIkXMr5lTAGO1ogiJOqwQY5D--W7LiH_wrYmcGodNkPBZ0-LauDCNsjWbisjFk0lhNUIwN_Kbx34aphIEa6stvhboY0CtED87YKJj4tOLmMxz5cKo2KXcyzZk1m-qdZyLgLEwHb9M9T8Vm_3getAXLStaCDIqzt07"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<div class="flex gap-sm mb-sm">
+<span class="bg-surface-container-highest px-sm py-xs rounded font-label-sm text-primary uppercase">Fintech</span>
+<span class="bg-surface-container-highest px-sm py-xs rounded font-label-sm text-primary uppercase">Web App</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Nova Finance</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Revolutionizing asset management with a high-frequency trading dashboard.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden glass-card etched-border">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a mobile phone screen displaying a luxury lifestyle app with elegant typography, rich textures, and deep charcoal backgrounds. The phone is held by a hand in a stylish, dimly lit setting with warm ambient highlights on the edges. High-fashion aesthetic, premium design focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAsCzcCtNS--zQ7CRnUsZRAuwLlADVN3X3eTwbFCcR17uv5YWLDEKLmk6S1HkEqawyk216koKV_UuMi8wfa662BHH4K6QdJz-ZoW-f3KPgv8PPjqhV7MJ49yJAIdWjL0Y4BeNltoN3J7TXDOvTOE3xz8oD0lRKh8IjDFrJGlpUdfEPN6y6W2Fx1aMcUqAWsetbSIpLzALItCssS56SBelxyuRgB58HVFIXd9dKPNvSqWK0Sa7LNoOl7RZp-cKpXEmJtXd2KEe8jF-z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<h3 class="font-headline-md text-[24px] mb-xs">Vanguard Mobile</h3>
+<p class="font-body-md text-on-surface-variant">A luxury e-commerce experience.</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden glass-card etched-border">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A clean, minimalist 3D rendering of an abstract AI network node, featuring glowing fiber optic cables and floating data particles in a dark, expansive void. The lighting is dominated by electric indigo and violet hues. Sharp focus, technological sophistication, high-end 3D art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbOYWCCj3j7TNTAIj3racDEZuN_vUPI5LDavPHw3SVpNkVP64yL3jXA0m0xf_LxAOGapUWrdhFMO2gcJ7m96QXb_SB-toJJgAh8at6G4PC5zlzY7fEvfG9I_37jhUb4rjxdwg2EPrX_7QrJG34auAXsbNIAAr_YOEjOWjbFZyoWMdN5qM1mX1Vd-1UWC6o03hspZQ7R4WMI49qHNqUf4txpmmuCXcyhBbuSweD4F3g7oas9d6KE53V-Ep6WZlGA_6zpifpTVnTXYHU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<h3 class="font-headline-md text-[24px] mb-xs">Neural Sync</h3>
+<p class="font-body-md text-on-surface-variant">AI-driven infrastructure monitor.</p>
+</div>
+</div>
+<div class="md:col-span-8 group relative rounded-3xl overflow-hidden glass-card etched-border">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of a futuristic city at night, with neon-lit streets and towering skyscrapers featuring holographic billboards. The color palette is a mix of deep blues, magentas, and blacks. Cinematic lighting with realistic fog and light trails. Representing a smart city digital twin platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLzyMc72CtcOg5m9PK4hrdZjB1gSzH5C-QNRu1gGYqciFpaiw8bDQ667PrSJvNkfeJWg10MI6JjhISRbgpgLZCgEPdz0bsxbiaoyRsCefM0rlz8ckC98xxniA9_zS_iUZa4rvNOEDjeTyHj9ZlPVeHDkkTVG0_g3HAuniUyI1QlbFKSmBopunUF-X69CgF586654HoATOTfw3eQhvRHtjvlZiMxNW78JiuehWJnrPB6CXEaJ8Mk1mzTCLOf31g3MvVVaFyJ4FmsdQc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<h3 class="font-headline-md text-headline-md mb-xs">Aether City</h3>
+<p class="font-body-md text-on-surface-variant">A digital twin platform for smart urban planning.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Development Process Section -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-xl">
+<h2 class="font-headline-lg text-headline-lg text-center mb-xl">Our Methodology</h2>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 hidden lg:block transform -translate-y-1/2"></div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-lg relative z-10">
+<!-- Step 1 -->
+<div class="space-y-md text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high border-4 border-surface border-t-primary flex items-center justify-center mx-auto relative group-hover:scale-110 transition-transform">
+<span class="font-label-md text-primary">01</span>
+</div>
+<h4 class="font-headline-md text-[24px]">Discovery</h4>
+<p class="font-body-md text-on-surface-variant px-md">Deep dive into your business goals, target audience, and technical requirements.</p>
+</div>
+<!-- Step 2 -->
+<div class="space-y-md text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high border-4 border-surface border-t-primary flex items-center justify-center mx-auto relative group-hover:scale-110 transition-transform">
+<span class="font-label-md text-primary">02</span>
+</div>
+<h4 class="font-headline-md text-[24px]">Design</h4>
+<p class="font-body-md text-on-surface-variant px-md">Crafting high-fidelity prototypes and technical blueprints with user-centric focus.</p>
+</div>
+<!-- Step 3 -->
+<div class="space-y-md text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high border-4 border-surface border-t-primary flex items-center justify-center mx-auto relative group-hover:scale-110 transition-transform">
+<span class="font-label-md text-primary">03</span>
+</div>
+<h4 class="font-headline-md text-[24px]">Development</h4>
+<p class="font-body-md text-on-surface-variant px-md">Agile execution with continuous delivery and rigorous automated testing.</p>
+</div>
+<!-- Step 4 -->
+<div class="space-y-md text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high border-4 border-surface border-t-primary flex items-center justify-center mx-auto relative group-hover:scale-110 transition-transform">
+<span class="font-label-md text-primary">04</span>
+</div>
+<h4 class="font-headline-md text-[24px]">Launch</h4>
+<p class="font-body-md text-on-surface-variant px-md">Seamless deployment, performance monitoring, and ongoing product scaling.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Astrix -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-xl">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-xl">
+<div class="space-y-md">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[28px]">stars</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Elite Talent</h3>
+<p class="font-body-md text-on-surface-variant">Our team consists of top-tier architects and designers formerly at leading global tech firms, bringing unrivaled expertise to every line of code.</p>
+</div>
+<div class="space-y-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[28px]">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Cutting-edge Tech</h3>
+<p class="font-body-md text-on-surface-variant">We don't just follow trends; we set them. We utilize the latest stable technologies to ensure your product remains competitive for years to come.</p>
+</div>
+<div class="space-y-md">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 border border-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[28px]">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Scalable Solutions</h3>
+<p class="font-body-md text-on-surface-variant">Built to grow with your ambition. Our architectures are designed to handle millions of requests without breaking a sweat.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Slider -->
+<section class="py-xl overflow-hidden">
+<div class="max-w-container-max mx-auto px-xl">
+<h2 class="font-headline-lg text-headline-lg mb-xl">Voices of Success</h2>
+<div class="flex gap-lg overflow-x-auto pb-lg snap-x no-scrollbar">
+<!-- Testimonial 1 -->
+<div class="min-w-[300px] md:min-w-[500px] snap-center glass-card etched-border p-lg rounded-3xl space-y-md">
+<p class="font-body-lg text-body-lg italic">"Astrix transformed our vision into a high-performance reality. Their engineering standards are the best we've seen in the industry."</p>
+<div class="flex items-center gap-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a female tech executive with a confident smile, wearing a modern black blazer, set against a blurred high-end office background. The lighting is soft and flattering, with a premium corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXQXocbrMq393_68BmVaN64YCbtMvBFGHjf4UH6u-1VOoA04Ahu8HAknrUjHGBtxHgzTxNlp4fnkoB3A0IjRCUGqKo0xqzW23YKX9Z99JB_FoEZKeIdFxLCYENjsczpg-VpjSq141yCwI0e9XbB0nONvEKJ9CBhctI5_NAGp-tuLyLXZ7eiPVCRQs84Cwy2e--hNi3RdI1VZPRo3-4JK0SGID6d0c1GMxfRVkkDKDTy_dqyDU0pqqVoW_6bvg3h0rqIiM0w0Tsjt_O"/>
+<div>
+<p class="font-label-md text-label-md font-bold">Sarah Jenkins</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">CTO, Nova Finance</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[300px] md:min-w-[500px] snap-center glass-card etched-border p-lg rounded-3xl space-y-md">
+<p class="font-body-lg text-body-lg italic">"The level of detail in the UI/UX work is astounding. Our conversion rates increased by 40% within the first month of launch."</p>
+<div class="flex items-center gap-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a male creative director with glasses, wearing a minimalist dark turtleneck, set against a clean studio background with cool-toned lighting. Sophisticated and approachable vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC26rEwBRLJrgek9jJ1SAKTt7hu1DjE_Y2cKDVeEYZlh1Ni3j3fRfPvJYteN848aTdhjodq01aZZQOguWOPgxT8WPzqMkWZ0EkiB1sZnn32e_ycyFOfysYWQ3vAz7x7Ok6VsyVNxUz9WENHOaF8mlVRsIrIQWmN0GDEZMbM4eEjvKYRNeGLx6-nFPWcemNSuKfl7eEt8ZRcvE2y6akSq2PfVFbMpG0QrTKwI2-mkfjR3JquGJQ-hB4UCIe3NhjfHgrHHgDpfoUJ4Xil"/>
+<div>
+<p class="font-label-md text-label-md font-bold">Marcus Thorne</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Product Head, Vanguard</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="min-w-[300px] md:min-w-[500px] snap-center glass-card etched-border p-lg rounded-3xl space-y-md">
+<p class="font-body-lg text-body-lg italic">"An absolute pleasure to work with. They act as a strategic partner rather than just a vendor. Highly recommended."</p>
+<div class="flex items-center gap-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Headshot of a middle-aged entrepreneur with salt-and-pepper hair, wearing a high-quality navy blue polo shirt, smiling warmly. The setting is a bright, modern interior with natural light and hints of greenery. Elite and trustworthy persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3cwUxDYjYR59zW-RasI8Wp3q9oZNUiW-Gj_Q3h_2iFBLrBw8JMx-ScVvIRf7hsSYGOcHmK5kgZ9vy3fDRsr06qHubqpxC-S4rc7IGoboZ4qp-rMjVyL2zsTokPI_4B5BczBtzDOJNa_GlDrlQ1KXHEbBVxEkrC74usy9w5yc76XdM-5WXboowf8z4vpBQLR1DkCEFq1NybohRgengK6SRM1TrCUxQTIHQjrh4DdsDfpHWlJeyjP4HwoR0hQz0m0LO0LBNDkUxPilA"/>
+<div>
+<p class="font-label-md text-label-md font-bold">David Chen</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Founder, Solaris Systems</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-3xl mx-auto px-xl">
+<h2 class="font-headline-lg text-headline-lg text-center mb-xl">Questions?</h2>
+<div class="space-y-md">
+<details class="group glass-card etched-border rounded-2xl p-md" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<span class="font-headline-md text-[20px]">What is your typical project timeline?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-md font-body-md text-on-surface-variant">Most projects range from 3 to 6 months depending on complexity. We work in two-week sprints to ensure continuous progress and regular feedback loops.</p>
+</details>
+<details class="group glass-card etched-border rounded-2xl p-md">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<span class="font-headline-md text-[20px]">Do you provide post-launch support?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-md font-body-md text-on-surface-variant">Absolutely. We offer various maintenance and evolution retainers to keep your platform secure, up-to-date, and growing with new features.</p>
+</details>
+<details class="group glass-card etched-border rounded-2xl p-md">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<span class="font-headline-md text-[20px]">How do you handle project management?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-md font-body-md text-on-surface-variant">We use Jira and Slack for real-time communication. Every project is assigned a dedicated Project Manager who acts as your primary point of contact.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="py-xl relative">
+<div class="max-w-container-max mx-auto px-xl">
+<div class="relative rounded-[40px] overflow-hidden bg-primary-container p-xl text-center space-y-lg">
+
+<div class="relative z-10 space-y-md">
+<h2 class="font-display-lg text-display-lg max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile text-on-primary">Let's Create Something Great</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto">
+                        Ready to elevate your digital presence? Join the ranks of elite companies working with Astrix.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md justify-center pt-md">
+<button class="bg-surface text-on-surface px-xl py-md rounded-xl font-label-md hover:scale-105 transition-transform">
+                            Book a Strategy Call
+                        </button>
+<button class="border border-on-primary/30 text-on-primary px-xl py-md rounded-xl font-label-md hover:bg-white/10 transition-all">
+                            Email Us Directly
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-xl border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl max-w-container-max mx-auto">
+<div class="space-y-md">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">ASTRIX</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Elite craftsmanship for the digital era. We build the future, one pixel at a time.</p>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase">Quick Links</h4>
+<ul class="space-y-xs">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase">Contact</h4>
+<ul class="space-y-xs">
+<li class="font-body-md text-on-surface-variant">hello@astrix.agency</li>
+<li class="font-body-md text-on-surface-variant">+1 (555) 000-1234</li>
+<li class="font-body-md text-on-surface-variant">San Francisco, CA</li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md text-primary uppercase">Newsletter</h4>
+<div class="flex gap-xs">
+<input class="bg-surface border border-white/10 rounded-lg px-md py-sm w-full focus:ring-1 focus:ring-primary outline-none text-body-md" placeholder="Email" type="email"/>
+<button class="bg-primary-container text-on-primary p-sm rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-lg border-t border-white/5 text-center px-xl max-w-container-max mx-auto">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Astrix Agency. Elite Craftsmanship. All Rights Reserved.</p>
+<div class="flex justify-center gap-md mt-md">
+<a class="font-label-sm text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+<a class="font-label-sm text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll interaction
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Sticky Navbar subtle background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-0');
+            } else {
+                nav.classList.remove('py-2');
+                nav.classList.add('py-0');
+            }
+        });
+    </script>
+</body></html>

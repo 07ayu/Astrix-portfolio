@@ -1,4 +1,6 @@
-import { section } from "motion/react-client";
+"use client";
+
+import { memo } from "react";
 import Image from "next/image";
 
 type Props = {
@@ -9,7 +11,7 @@ type Props = {
   span: string;
 };
 
-export default function ProjectCard({
+const ProjectCard = memo(function ProjectCard({
   title,
   category,
   description,
@@ -17,7 +19,6 @@ export default function ProjectCard({
   span,
 }: Props) {
   return (
-    // <section className="relative container-custom py-28">
     <div
       className={`
         project-card
@@ -55,6 +56,7 @@ export default function ProjectCard({
         <p className="mt-3 max-w-md text-neutral-400">{description}</p>
       </div>
     </div>
-    //   </section>
   );
-}
+});
+
+export default ProjectCard;

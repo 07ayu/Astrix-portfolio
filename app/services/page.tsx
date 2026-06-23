@@ -9,14 +9,19 @@ import TechStack from "@/components/services/TechStack";
 import Methodology from "@/components/sections/Methodology";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
+import { useReveal } from "@/hooks/useReveal";
 
 export default function ServicesPage() {
+  const headingRef = useReveal({ direction: "up" });
+
   return (
     <>
       <Navbar />
 
       <main>
-        <ServicesHero />
+        <div ref={headingRef}>
+          <ServicesHero />
+        </div>
         <Capabilities />
         <TechStack />
         <Methodology />

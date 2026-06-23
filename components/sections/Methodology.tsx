@@ -1,17 +1,28 @@
-import { FEATURES, PROCESS_STEPS } from "@/lib/constants";
+"use client";
+
+import SectionHeader from "@/components/ui/SectionHeader";
+import { FEATURES, PROCESS_STEPS } from "@/data";
+import { useReveal } from "@/hooks/useReveal";
+import { useStagger } from "@/hooks/useStagger";
 
 import ProcessStep from "@/components/ui/ProcessStep";
 import FeatureCard from "@/components/ui/FeatureCard";
 
 export default function Methodology() {
-  return (
-    <section className="container-custom py-32">
-      <h2 className="mb-20 text-center font-syne text-5xl font-bold">
-        Our Methodology
-      </h2>
+  const headingRef = useReveal({ direction: "up" });
+  const processRef = useStagger(".process-step");
+  const featuresRef = useStagger(".feature-card");
 
+  return (
+    <section className="container-custom py-28">
+      <div ref={headingRef}>
+        <SectionHeader
+          title="Our Methodology"
+          description="How we turn complex architectural challenges into seamless digital reality."
+        />
+      </div>
       {/* PROCESS */}
-      <div className="relative mb-24">
+      <div ref={processRef} className="relative mb-24">
         <div className="absolute left-0 right-0 top-7 hidden h-px bg-white/10 lg:block" />
 
         <div className="grid gap-12 lg:grid-cols-4">
@@ -22,7 +33,7 @@ export default function Methodology() {
       </div>
 
       {/* FEATURES */}
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div ref={featuresRef} className="grid gap-6 lg:grid-cols-3">
         {FEATURES.map((feature) => (
           <FeatureCard key={feature.title} {...feature} />
         ))}
