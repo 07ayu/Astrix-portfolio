@@ -11,17 +11,24 @@ const FeatureCard = memo(function FeatureCard({ title, description }: Props) {
   return (
     <div
       className="
-      feature-card
+        feature-card
+        group
         rounded-3xl
         border
-        border-white/5
-        bg-[#141414]
+        border-white/10
+        bg-[#0E0E12]
         p-8
+        transition-all
+        duration-300
+        hover:border-[#6D5DFC]/40
+        hover:bg-[#12111A]
       "
     >
-      <h3 className="mb-4 font-syne text-2xl font-bold">{title}</h3>
+      <h3 className="mb-3 font-syne text-xl font-bold text-white transition-colors group-hover:text-[#A89BFF]">
+        {title}
+      </h3>
 
-      <p className="leading-7 text-neutral-400">{description}</p>
+      <p className="text-sm leading-relaxed text-neutral-400">{description}</p>
     </div>
   );
 });

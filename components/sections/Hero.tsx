@@ -1,114 +1,128 @@
 "use client";
 
-import Image from "next/image";
+import Link from "next/link";
+import HeroCanvas from "@/components/3d/HeroCanvas";
 import { useReveal } from "@/hooks/useReveal";
+import { STATS } from "@/data";
 
 export default function Hero() {
   const contentRef = useReveal({ direction: "up", delay: 0.1 });
-  const visualRef = useReveal({ direction: "right", delay: 0.2 });
+  const visualRef = useReveal({ direction: "left", delay: 0.2 });
 
   return (
-    <section className="relative overflow-hidden border-b border-white/5">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#6D5DFC20,transparent_55%)]" />
+    <section className="relative min-h-[92vh] overflow-hidden border-b border-white/5 pt-32 pb-20 md:pt-40 md:pb-28">
+      {/* Restrained architectural ambient gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,#6D5DFC18,transparent_50%)]" />
+      <div className="pointer-events-none absolute right-10 top-1/4 h-[500px] w-[500px] rounded-full bg-[#6D5DFC]/10 blur-[180px]" />
 
-      <div className="absolute left-1/2 top-20 -translate-x-1/2 h-[650px] w-[900px] rounded-full bg-[#6D5DFC]/15 blur-[220px]" />
-
-      <div className="container-custom relative pt-36 pb-28">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
-          {/* LEFT */}
-          <div ref={contentRef}>
-            {/* EYEBROW */}
-            <div className="mb-8">
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.25em] text-white/70">
-                Elite Software Studio
+      <div className="container-custom relative">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+          {/* LEFT EDITORIAL CONTENT (Column 7) */}
+          <div ref={contentRef} className="lg:col-span-7">
+            {/* EYEBROW BADGE */}
+            <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-[#6D5DFC] animate-pulse" />
+              <span className="text-xs font-medium uppercase tracking-[0.2em] text-neutral-300">
+                Software Architecture & Engineering Studio
               </span>
             </div>
 
-            {/* HEADING */}
-            <h1 className="font-syne text-5xl font-extrabold leading-[0.9] tracking-[-0.04em] md:text-6xl lg:text-7xl">
+            {/* EDITORIAL HEADING */}
+            <h1 className="font-syne text-5xl font-extrabold tracking-[-0.03em] text-white sm:text-6xl md:text-7xl lg:text-[76px] leading-[0.95]">
               Engineering
               <br />
               Excellence
               <br />
-              <span className="text-[#A89BFF]">at Scale.</span>
+              <span className="bg-gradient-to-r from-[#A89BFF] via-[#8a6dff] to-[#6D5DFC] bg-clip-text text-transparent">
+                at Scale.
+              </span>
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-8 max-w-lg text-lg leading-8 text-neutral-400">
-              We architect high-performance software ecosystems for startups,
-              enterprises, and ambitious founders seeking uncompromising
-              technical execution.
+            <p className="mt-8 max-w-xl text-base md:text-lg leading-relaxed text-neutral-400">
+              We design and build production-grade web systems, high-throughput cloud infrastructure, and modern SaaS products for ambitious tech companies.
             </p>
 
-            {/* CTA */}
-            <div className="mt-10 flex flex-wrap gap-4">
-              <button className="h-14 rounded-2xl bg-[#6D5DFC] px-8 font-medium transition hover:scale-[1.02]">
-                Start a Project
-              </button>
+            {/* CALL TO ACTION BUTTONS */}
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex h-13 items-center justify-center rounded-xl bg-[#6D5DFC] px-7 text-sm font-semibold text-white shadow-[0_0_25px_rgba(109,93,252,0.35)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#7c6dff] hover:shadow-[0_0_35px_rgba(109,93,252,0.55)] active:scale-[0.98]"
+              >
+                <span>Start a Project</span>
+                <svg
+                  className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
 
-              <button className="h-14 rounded-2xl border border-white/10 px-8 font-medium transition hover:bg-white/5">
-                View Portfolio
-              </button>
+              <Link
+                href="/portfolio"
+                className="inline-flex h-13 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] px-7 text-sm font-medium text-neutral-300 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+              >
+                View Case Studies
+              </Link>
             </div>
 
-            {/* STATS */}
-            <div className="mt-14 flex flex-wrap gap-10 border-t border-white/5 pt-10">
-              <div>
-                <p className="font-syne text-4xl font-bold">50+</p>
-                <p className="mt-2 text-sm text-neutral-500">
-                  Projects Delivered
-                </p>
-              </div>
-
-              <div>
-                <p className="font-syne text-4xl font-bold">12</p>
-                <p className="mt-2 text-sm text-neutral-500">
-                  Countries Served
-                </p>
-              </div>
-
-              <div>
-                <p className="font-syne text-4xl font-bold">99%</p>
-                <p className="mt-2 text-sm text-neutral-500">
-                  Client Retention
-                </p>
-              </div>
+            {/* VERIFIED KEY METRICS */}
+            <div className="mt-14 grid grid-cols-2 gap-6 border-t border-white/5 pt-8 sm:grid-cols-4">
+              {STATS.map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-syne text-2xl font-bold text-white md:text-3xl">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-[11px] uppercase tracking-wider text-neutral-500">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* RIGHT VISUAL */}
-          <div ref={visualRef} className="relative">
-            {/* floating card */}
-            <div className="absolute -left-8 top-10 z-20 rounded-3xl border border-white/10 bg-black/70 p-6 backdrop-blur-xl">
-              <p className="text-xs uppercase tracking-widest text-neutral-500">
-                PERFORMANCE
-              </p>
+          {/* RIGHT 3D INTERACTIVE VISUAL (Column 5) */}
+          <div ref={visualRef} className="relative lg:col-span-5">
+            <div className="relative mx-auto h-[440px] w-full max-w-[500px] lg:h-[560px] lg:max-w-none">
+              {/* Telemetry Badge Top */}
+              <div className="absolute top-4 left-0 z-20 rounded-2xl border border-white/10 bg-[#0B0B0E]/80 p-4 backdrop-blur-xl shadow-2xl">
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                  <p className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+                    Runtime Architecture
+                  </p>
+                </div>
+                <p className="mt-1 font-syne text-xl font-bold text-white">
+                  99.98% <span className="text-xs font-normal text-neutral-400">SLA</span>
+                </p>
+                <p className="text-[11px] text-[#A89BFF]">Sub-15ms Edge Latency</p>
+              </div>
 
-              <p className="mt-2 font-syne text-4xl font-bold text-[#A89BFF]">
-                +400%
-              </p>
+              {/* 3D Scene Canvas */}
+              <div className="h-full w-full rounded-3xl border border-white/[0.08] bg-[#0A0A0E]/60 p-2 backdrop-blur-2xl">
+                <HeroCanvas />
+              </div>
 
-              <p className="text-sm text-neutral-400">Throughput Increase</p>
-            </div>
-
-            {/* image */}
-            <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[#111]">
-              <Image
-                src="/hero/server-room.svg"
-                alt="Astrix Infrastructure"
-                width={1200}
-                height={1600}
-                className="h-[680px] w-full object-cover"
-                priority
-              />
-            </div>
-
-            {/* bottom card */}
-            <div className="absolute -bottom-8 right-6 rounded-3xl border border-white/10 bg-black/80 p-6 backdrop-blur-xl">
-              <p className="font-syne text-3xl font-bold">99.99%</p>
-
-              <p className="mt-1 text-sm text-neutral-400">Uptime Guaranteed</p>
+              {/* Telemetry Badge Bottom */}
+              <div className="absolute -bottom-4 right-0 z-20 rounded-2xl border border-white/10 bg-[#0B0B0E]/85 p-4 backdrop-blur-xl shadow-2xl">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+                  Engineering Standard
+                </p>
+                <p className="mt-1 font-syne text-lg font-bold text-white">
+                  Zero-Downtime Deployments
+                </p>
+                <div className="mt-2 flex items-center gap-2 text-[11px] text-neutral-400">
+                  <span className="rounded bg-white/5 px-2 py-0.5 font-mono text-[10px] text-[#A89BFF]">
+                    Next.js 16
+                  </span>
+                  <span>•</span>
+                  <span className="rounded bg-white/5 px-2 py-0.5 font-mono text-[10px] text-[#A89BFF]">
+                    Microservices
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

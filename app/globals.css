@@ -2,30 +2,13 @@
 
 :root {
   --bg: #070707;
-
   --card: #121212;
-
   --border: rgba(255, 255, 255, 0.08);
-
   --text: #ffffff;
-
   --muted: #8b8b8b;
-
   --primary: #6f4cff;
-
   --primary-light: #8a6dff;
 }
-
-/* :root {
-  --bg: #070707;
-  --card: #141414;
-  --card-2: #1c1c1c;
-
-  --text: #ffffff;
-  --muted: #8f8f8f;
-
-  --accent: #6d5dfc;
-} */
 
 html {
   scroll-behavior: auto;
@@ -61,9 +44,20 @@ h6 {
   padding-block: 120px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #070707;
+    --foreground: #ffffff;
   }
 }

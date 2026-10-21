@@ -1,4 +1,5 @@
 export {
+  CONTACT_INFO,
   STATS,
   SERVICES,
   PROJECTS,

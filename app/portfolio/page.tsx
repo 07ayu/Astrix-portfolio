@@ -10,7 +10,7 @@ import { PROJECTS } from "@/data";
 
 export default function PortfolioPage() {
   const headingRef = useReveal({ direction: "up" });
-  const gridRef = useStagger(".project-card");
+  const gridRef = useStagger(".project-card", { stagger: 0.12 });
 
   return (
     <>
@@ -20,12 +20,13 @@ export default function PortfolioPage() {
         <section className="container-custom pt-36 pb-28">
           <div ref={headingRef}>
             <SectionHeader
-              title="Our Portfolio"
-              description="Selected digital products and premium software experiences we've crafted."
+              badge="ARCHITECTURAL CATALOG"
+              title="Production Systems & Case Studies"
+              description="A curated portfolio of high-throughput software architectures, fintech platforms, and scalable consumer applications."
             />
           </div>
 
-          <div ref={gridRef} className="grid gap-6 md:grid-cols-3">
+          <div ref={gridRef} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {PROJECTS.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
