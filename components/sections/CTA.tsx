@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
 import { CONTACT_INFO } from "@/data";
+import MagneticButton from "@/components/ui/MagneticButton";
+import SplitReveal from "@/components/ui/SplitReveal";
 
 export default function CTA() {
   const sectionRef = useReveal({ direction: "up", distance: 60 });
@@ -19,7 +21,7 @@ export default function CTA() {
           </span>
 
           <h2 className="mt-6 font-syne text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-            {CONTACT_INFO.tagline}
+            <SplitReveal>{CONTACT_INFO.tagline}</SplitReveal>
           </h2>
 
           <p className="mt-6 text-sm md:text-base leading-relaxed text-neutral-400">
@@ -27,19 +29,23 @@ export default function CTA() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex h-13 items-center justify-center rounded-xl bg-[#6D5DFC] px-8 text-sm font-semibold text-white shadow-[0_0_30px_rgba(109,93,252,0.4)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#7b6dff] active:scale-[0.98]"
-            >
-              Start a Project
-            </Link>
+            <MagneticButton strength={0.3}>
+              <Link
+                href="/contact"
+                className="inline-flex h-13 items-center justify-center rounded-xl bg-[#6D5DFC] px-8 text-sm font-semibold text-white shadow-[0_0_30px_rgba(109,93,252,0.4)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#7b6dff] active:scale-[0.98]"
+              >
+                Start a Project
+              </Link>
+            </MagneticButton>
 
-            <a
-              href={`mailto:${CONTACT_INFO.email}`}
-              className="inline-flex h-13 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] px-8 text-sm font-medium text-neutral-300 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
-            >
-              {CONTACT_INFO.email}
-            </a>
+            <MagneticButton strength={0.3}>
+              <a
+                href={`mailto:${CONTACT_INFO.email}`}
+                className="inline-flex h-13 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] px-8 text-sm font-medium text-neutral-300 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+              >
+                {CONTACT_INFO.email}
+              </a>
+            </MagneticButton>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-400">

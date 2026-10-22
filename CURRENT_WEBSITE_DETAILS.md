@@ -2,10 +2,10 @@
 
 > **Comprehensive System & Architecture Documentation**  
 > **Repository:** `07ayu/Astrix-portfolio`  
-> **Current Version:** `0.3.0 (Verified Authentic Agency Details)`  
+> **Current Version:** `0.4.0 (Award-Level 3D & Creative Animation Upgrade)`  
 > **Framework:** Next.js 16.2.9 (App Router, Turbopack) + React 19.2.4  
-> **3D Graphics:** React Three Fiber 9.8.2 + Drei 10.7.9 + Three.js 0.170.0  
-> **Aesthetic Archetype:** Dark Cyber-Editorial / Ultra-Modern Glassmorphism & WebGL Core  
+> **3D Graphics:** React Three Fiber 9.8.2 + Drei 10.7.9 + Three.js 0.186 + Postprocessing 3.2  
+> **Aesthetic Archetype:** Dark Cyber-Editorial / Ultra-Modern Glassmorphism & Persistent WebGL Core  
 > **Updated:** October 2026
 
 ---
@@ -15,7 +15,7 @@
 2. [Authentic Core Service Offerings](#2-authentic-core-service-offerings)
 3. [Technology Stack & Core Dependencies](#3-technology-stack--core-dependencies)
 4. [Design System & Theming Tokens](#4-design-system--theming-tokens)
-5. [3D Architecture & Performance Fallbacks](#5-3d-architecture--performance-fallbacks)
+5. [3D Architecture & Persistent Scene Engine](#5-3d-architecture--persistent-scene-engine)
 6. [Global Providers & Animation Engine](#6-global-providers--animation-engine)
 7. [Complete Route Breakdown](#7-complete-route-breakdown)
 8. [Comprehensive Component Inventory](#8-comprehensive-component-inventory)

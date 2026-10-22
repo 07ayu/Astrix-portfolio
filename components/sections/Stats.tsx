@@ -7,7 +7,7 @@ export default function Stats() {
   const counterRef = useCounter();
 
   return (
-    <section ref={counterRef} className="border-y border-white/5 bg-[#08080C] py-14">
+    <section ref={counterRef} className="border-y border-white/5 bg-[#08080C]/75 backdrop-blur-md py-14">
       <div className="container-custom">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {STATS.map((item) => (

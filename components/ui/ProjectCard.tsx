@@ -1,8 +1,10 @@
 "use client";
 
-import { memo } from "react";
+import { memo, useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import SpotlightCard from "./SpotlightCard";
+import MagneticButton from "./MagneticButton";
 
 type Props = {
   title: string;
@@ -26,28 +28,51 @@ const ProjectCard = memo(function ProjectCard({
   deliverables,
 }: Props) {
   const isLarge = span === "large";
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rx = -((y - centerY) / centerY) * 6; // max 6 deg
+    const ry = ((x - centerX) / centerX) * 6;
+    setTilt({ rx, ry });
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false);
+    setTilt({ rx: 0, ry: 0 });
+  }, []);
 
   return (
     <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        transform: `perspective(1000px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg) scale3d(${isHovered ? 1.015 : 1}, ${isHovered ? 1.015 : 1}, 1)`,
+        transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)",
+      }}
       className={`
         project-card
-        group
-        relative
-        flex
-        flex-col
-        justify-between
-        overflow-hidden
-        rounded-[28px]
-        border
-        border-white/10
-        bg-[#0D0D12]
-        transition-all
-        duration-500
-        hover:border-[#6D5DFC]/40
-        hover:bg-[#111019]
         ${isLarge ? "lg:col-span-2" : "lg:col-span-1"}
+        h-full
       `}
     >
+      <SpotlightCard
+        className="group flex flex-col justify-between h-full"
+      >
       {/* Top Visual Preview Container */}
       <div className={`relative w-full overflow-hidden border-b border-white/5 ${isLarge ? "h-[340px]" : "h-[260px]"}`}>
         <Image
@@ -58,7 +83,7 @@ const ProjectCard = memo(function ProjectCard({
         />
 
         {/* Subtle glass reflection gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D12] via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E14] via-transparent to-black/30" />
 
         {/* Live Architecture Metric Chip */}
         {metrics && (
@@ -118,20 +143,23 @@ const ProjectCard = memo(function ProjectCard({
           </div>
         )}
 
-        {/* Footer Link */}
+        {/* Footer Link with Magnetic attraction */}
         <div className="mt-6 flex items-center justify-between border-t border-white/5 pt-4">
           <span className="text-xs text-neutral-500">Production Case Study</span>
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#A89BFF] hover:text-white transition-colors"
-          >
-            <span>View Architecture</span>
-            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </Link>
+          <MagneticButton strength={0.35}>
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-[#A89BFF] hover:text-white transition-colors px-2 py-1 rounded-md"
+            >
+              <span>View Architecture</span>
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </MagneticButton>
         </div>
       </div>
-    </div>
-  );
+    </SpotlightCard>
+  </div>
+);
 });
 
 export default ProjectCard;

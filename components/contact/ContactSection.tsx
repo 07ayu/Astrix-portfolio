@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
 import { useStagger } from "@/hooks/useStagger";
 import { CONTACT_INFO } from "@/data";
+import ReactiveContactScene from "@/components/3d/ReactiveContactScene";
 
 const projectTypes = [
   "Web Development",
@@ -26,6 +27,18 @@ export default function ContactSection() {
     details: "",
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [isFocused, setIsFocused] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+  const typingTimer = useRef<NodeJS.Timeout | null>(null);
+
+  const handleInputChange = (field: string, val: string) => {
+    setFormData((prev) => ({ ...prev, [field]: val }));
+    setIsTyping(true);
+    if (typingTimer.current) clearTimeout(typingTimer.current);
+    typingTimer.current = setTimeout(() => {
+      setIsTyping(false);
+    }, 500);
+  };
 
   const toggleType = (type: string) => {
     setSelectedTypes((prev) =>
@@ -82,7 +95,9 @@ export default function ContactSection() {
                       type="text"
                       required
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onFocus={() => setIsFocused(true)}
+                      onBlur={() => setIsFocused(false)}
+                      onChange={(e) => handleInputChange("name", e.target.value)}
                       placeholder="Jane Doe"
                       className="w-full rounded-xl border border-white/10 bg-[#08080C] px-4 py-3.5 text-sm text-white placeholder-neutral-500 outline-none transition focus:border-[#6D5DFC]/80"
                     />
@@ -96,7 +111,9 @@ export default function ContactSection() {
                       type="email"
                       required
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onFocus={() => setIsFocused(true)}
+                      onBlur={() => setIsFocused(false)}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
                       placeholder="jane@company.com"
                       className="w-full rounded-xl border border-white/10 bg-[#08080C] px-4 py-3.5 text-sm text-white placeholder-neutral-500 outline-none transition focus:border-[#6D5DFC]/80"
                     />
@@ -136,7 +153,9 @@ export default function ContactSection() {
                     rows={5}
                     required
                     value={formData.details}
-                    onChange={(e) => setFormData({ ...formData, details: e.target.value })}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                    onChange={(e) => handleInputChange("details", e.target.value)}
                     placeholder="Tell us about your idea, required technology, expected timeline, or features you want to build..."
                     className="w-full rounded-xl border border-white/10 bg-[#08080C] p-4 text-sm text-white placeholder-neutral-500 outline-none transition focus:border-[#6D5DFC]/80"
                   />
@@ -155,6 +174,15 @@ export default function ContactSection() {
 
           {/* RIGHT SIDE CONTACT INFORMATION */}
           <div ref={sidebarRef} className="space-y-6">
+            {/* Reactive 3D Quantum Signal Beacon Core */}
+            <div className="contact-card">
+              <ReactiveContactScene
+                isFocused={isFocused}
+                isTyping={isTyping}
+                isSuccess={status === "success"}
+              />
+            </div>
+
             <div className="contact-card rounded-[32px] border border-white/10 bg-[#0E0E14] p-8">
               <h3 className="font-syne text-2xl font-bold text-white">Direct Channels</h3>
               <p className="mt-1 text-xs text-[#A89BFF] font-medium">{CONTACT_INFO.motto} — {CONTACT_INFO.tagline}</p>

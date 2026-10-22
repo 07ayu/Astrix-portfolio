@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
+import SpotlightCard from "@/components/ui/SpotlightCard";
 import { FAQS } from "@/data";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -26,17 +27,15 @@ export default function FAQ() {
           const isOpen = openIndex === index;
 
           return (
-            <div
+            <SpotlightCard
               key={faq.question}
-              className={`rounded-2xl border transition-all duration-300 ${
-                isOpen
-                  ? "border-[#6D5DFC]/40 bg-[#12111A]"
-                  : "border-white/10 bg-[#0E0E12] hover:border-white/20"
+              className={`rounded-2xl transition-all duration-300 ${
+                isOpen ? "border-[#6D5DFC]/60 bg-[#12111A]" : "hover:border-white/20"
               }`}
             >
               <button
                 onClick={() => toggle(index)}
-                className="flex w-full items-center justify-between p-6 text-left"
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
                 aria-expanded={isOpen}
               >
                 <span className="font-syne text-base md:text-lg font-bold text-white">
@@ -59,7 +58,7 @@ export default function FAQ() {
                   {faq.answer}
                 </div>
               )}
-            </div>
+            </SpotlightCard>
           );
         })}
       </div>

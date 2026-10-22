@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import SectionContainer from "../shared/SectionContainer";
 import { useReveal } from "@/hooks/useReveal";
+import InteractiveChip from "@/components/3d/InteractiveChip";
 
 export default function Mission() {
   const contentRef = useReveal({ direction: "left" });
@@ -20,14 +20,8 @@ export default function Mission() {
           </blockquote>
         </div>
 
-        <div ref={imageRef} className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#141414]">
-          <Image
-            src="/images/about-chip.svg"
-            alt=""
-            width={1200}
-            height={800}
-            className="h-full w-full object-cover"
-          />
+        <div ref={imageRef} className="relative">
+          <InteractiveChip />
         </div>
       </div>
     </SectionContainer>

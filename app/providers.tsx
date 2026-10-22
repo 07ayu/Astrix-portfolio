@@ -16,17 +16,15 @@ export default function Providers({ children }: { children: ReactNode }) {
       ScrollTrigger.update();
     });
 
-    gsap.ticker.add((time: number) => {
+    const updateTicker = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+
+    gsap.ticker.add(updateTicker);
     gsap.ticker.lagSmoothing(0);
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
 
     return () => {
+      gsap.ticker.remove(updateTicker);
       lenis.destroy();
     };
   }, []);

@@ -2,12 +2,12 @@
 
 :root {
   --bg: #070707;
-  --card: #121212;
+  --card: #0E0E12;
   --border: rgba(255, 255, 255, 0.08);
   --text: #ffffff;
   --muted: #8b8b8b;
-  --primary: #6f4cff;
-  --primary-light: #8a6dff;
+  --primary: #6D5DFC;
+  --primary-light: #A89BFF;
 }
 
 html {
@@ -37,14 +37,38 @@ h6 {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: 24px;
+  padding-inline: 16px;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-inline: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-inline: 32px;
+  }
 }
 
 .section-spacing {
   padding-block: 120px;
 }
 
+/* Keyframes for seamless infinite marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+
   *,
   ::before,
   ::after {

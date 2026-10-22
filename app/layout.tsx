@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import Preloader from "@/components/ui/Preloader";
+import PageTransition from "@/components/ui/PageTransition";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,7 +32,10 @@ export default function RootLayout({
         className={`${inter.variable} ${syne.variable} min-h-full flex flex-col bg-black text-white`}
         suppressHydrationWarning
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Preloader />
+          <PageTransition>{children}</PageTransition>
+        </Providers>
       </body>
     </html>
   );
